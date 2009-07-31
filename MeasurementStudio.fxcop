@@ -1,0 +1,3539 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FxCopProject Version="1.36" Name="My FxCop Project">
+ <ProjectOptions>
+  <SharedProject>True</SharedProject>
+  <Stylesheet Apply="False">c:\program files\microsoft fxcop 1.36\Xml\FxCopReport.xsl</Stylesheet>
+  <SaveMessages>
+   <Project Status="Active, Excluded" NewOnly="False" />
+   <Report Status="Active" NewOnly="False" />
+  </SaveMessages>
+  <ProjectFile Compress="True" DefaultTargetCheck="True" DefaultRuleCheck="True" SaveByRuleGroup="" Deterministic="True" />
+  <EnableMultithreadedLoad>True</EnableMultithreadedLoad>
+  <EnableMultithreadedAnalysis>True</EnableMultithreadedAnalysis>
+  <SourceLookup>True</SourceLookup>
+  <AnalysisExceptionsThreshold>10</AnalysisExceptionsThreshold>
+  <RuleExceptionsThreshold>1</RuleExceptionsThreshold>
+  <Spelling Locale="ru-RU" />
+  <OverrideRuleVisibilities>False</OverrideRuleVisibilities>
+  <CustomDictionaries SearchFxCopDir="True" SearchUserProfile="True" SearchProjectDir="True" />
+  <SearchGlobalAssemblyCache>False</SearchGlobalAssemblyCache>
+  <DeadlockDetectionTimeout>120</DeadlockDetectionTimeout>
+  <IgnoreGeneratedCode>False</IgnoreGeneratedCode>
+ </ProjectOptions>
+ <Targets>
+  <AssemblyReferenceDirectories>
+   <Directory>$(ProjectDir)/_bin/Release/</Directory>
+   <Directory>$(ProjectDir)/_bin/Release/Plugins/</Directory>
+  </AssemblyReferenceDirectories>
+  <Target Name="$(ProjectDir)/_bin/Debug/APPA_Multimeter.dll" Analyze="True" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/_bin/Debug/Common.dll" Analyze="True" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/_bin/Debug/MeasurementStudio.exe" Analyze="True" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/_bin/Debug/Plugins/B7_78_Experiment.dll" Analyze="True" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/_bin/Debug/Plugins/Stub_Experiment.dll" Analyze="True" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/_bin/Debug/Voltmeter.dll" Analyze="True" AnalyzeAllChildren="True" />
+ </Targets>
+ <Rules>
+  <RuleFiles>
+   <RuleFile Name="$(FxCopDir)\Rules\DesignRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\GlobalizationRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\InteroperabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\MobilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\NamingRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PerformanceRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PortabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\SecurityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\UsageRules.dll" Enabled="True" AllRulesEnabled="True" />
+  </RuleFiles>
+  <Groups />
+  <Settings />
+ </Rules>
+ <FxCopReport Version="1.36">
+  <Namespaces>
+   <Namespace Name="B7_78_Experiment">
+    <Messages>
+     <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Created="2009-07-28 20:41:09Z">
+      <Issue Name="Namespace">
+       <Item>B7_78_Experiment</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="Common.WPF">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2009-07-28 12:42:46Z">
+      <Issue>
+       <Item>Common.WPF</Item>
+      </Issue>
+     </Message>
+     <Message Id="WPF" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-07-28 12:42:46Z">
+      <Issue Name="Namespace">
+       <Item>WPF</Item>
+       <Item>Common.WPF</Item>
+       <Item>Wpf</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="Stub_Experiment">
+    <Messages>
+     <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Created="2009-07-28 12:42:46Z">
+      <Issue Name="Namespace">
+       <Item>Stub_Experiment</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="TSU.Voltmeters">
+    <Messages>
+     <Message Id="TSU" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-07-28 12:42:46Z">
+      <Issue Name="Namespace">
+       <Item>TSU</Item>
+       <Item>TSU.Voltmeters</Item>
+       <Item>Tsu</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="TSU.Voltmeters.APPA">
+    <Messages>
+     <Message Id="APPA" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-07-28 12:42:46Z">
+      <Issue Name="Namespace">
+       <Item>APPA</Item>
+       <Item>TSU.Voltmeters.APPA</Item>
+       <Item>Appa</Item>
+      </Issue>
+     </Message>
+     <Message Id="TSU" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-07-28 12:42:46Z">
+      <Issue Name="Namespace">
+       <Item>TSU</Item>
+       <Item>TSU.Voltmeters.APPA</Item>
+       <Item>Tsu</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+  </Namespaces>
+  <Targets>
+   <Target Name="$(ProjectDir)/_bin/Debug/APPA_Multimeter.dll">
+    <Modules>
+     <Module Name="appa_multimeter.dll">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2009-07-28 12:42:46Z">
+        <Issue Name="NoStrongName">
+         <Item>'APPA_Multimeter.dll'</Item>
+        </Issue>
+       </Message>
+       <Message Id="APPA" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-07-28 12:42:46Z">
+        <Issue Name="Assembly">
+         <Item>APPA</Item>
+         <Item>'APPA_Multimeter.dll'</Item>
+         <Item>Appa</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Created="2009-07-28 12:42:46Z">
+        <Issue Name="Assembly">
+         <Item>'APPA_Multimeter.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Created="2009-07-28 12:42:46Z">
+        <Issue>
+         <Item>'APPA_Multimeter.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824" Created="2009-07-28 12:42:46Z">
+        <Issue>
+         <Item>'APPA_Multimeter.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="TSU.Voltmeters.APPA">
+        <Types>
+         <Type Name="DataReceivedEventArgs">
+          <Members>
+           <Member Name="#Delta">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'DataReceivedEventArgs.Delta'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Mode">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'DataReceivedEventArgs.Mode'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Value">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'DataReceivedEventArgs.Value'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="DataReceivedEventHandler">
+          <Messages>
+           <Message TypeName="UseGenericEventHandlerInstances" Category="Microsoft.Design" CheckId="CA1003" Created="2009-07-28 12:42:46Z">
+            <Issue>
+             <Item>'DataReceivedEventHandler'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="MeasurementMode">
+          <Members>
+           <Member Name="#mV">
+            <Messages>
+             <Message Id="m" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-07-28 12:42:46Z">
+              <Issue Name="Member">
+               <Item>m</Item>
+               <Item>'MeasurementMode.mV'</Item>
+               <Item>M</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#V">
+            <Messages>
+             <Message Id="V" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-07-28 12:42:46Z">
+              <Issue Name="MemberMoreMeaningfulName">
+               <Item>'MeasurementMode.V'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="MeasurementVelocity">
+          <Messages>
+           <Message TypeName="EnumsShouldHaveZeroValue" Category="Microsoft.Design" CheckId="CA1008" Created="2009-07-28 12:42:46Z" FixCategory="NonBreaking">
+            <Issue Name="NotFlagsNoZeroValue">
+             <Item>'MeasurementVelocity'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="Multimeter109nControl">
+          <Messages>
+           <Message Id="n" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-07-28 12:42:46Z">
+            <Issue Name="Type">
+             <Item>n</Item>
+             <Item>'Multimeter109nControl'</Item>
+             <Item>N</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#.ctor()">
+            <Messages>
+             <Message TypeName="DoNotInitializeUnnecessarily" Category="Microsoft.Performance" CheckId="CA1805" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'Multimeter109nControl.Multimeter109nControl()'</Item>
+               <Item>'Multimeter109nControl.components'</Item>
+               <Item>'IContainer'</Item>
+               <Item>null</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#MpS">
+            <Messages>
+             <Message Id="Mp" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-07-28 12:42:46Z">
+              <Issue Name="Member">
+               <Item>Mp</Item>
+               <Item>'Multimeter109nControl.MpS'</Item>
+               <Item>MP</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#DataReceived" Kind="Event">
+            <Messages>
+             <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Created="2009-07-28 12:42:46Z">
+              <Issue Name="Second">
+               <Item>'DataReceivedEventHandler'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+   <Target Name="$(ProjectDir)/_bin/Debug/Common.dll">
+    <Modules>
+     <Module Name="common.dll">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2009-07-28 12:42:46Z">
+        <Issue Name="NoStrongName">
+         <Item>'Common.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Created="2009-07-28 12:42:46Z">
+        <Issue>
+         <Item>'Common.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="Common">
+        <Types>
+         <Type Name="AbstractExperiment">
+          <Members>
+           <Member Name="#allPoints">
+            <Messages>
+             <Message TypeName="DoNotDeclareReadOnlyMutableReferenceTypes" Category="Microsoft.Security" CheckId="CA2104" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'AbstractExperiment.allPoints'</Item>
+               <Item>'IList&lt;Point3D&gt;'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'AbstractExperiment.allPoints'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetSettingsPath()">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2009-07-28 12:42:46Z">
+              <Issue Certainty="50">
+               <Item>'AbstractExperiment.GetSettingsPath()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#RaiseMeasurementEvent(Common.MeasurementEventArgs)">
+            <Messages>
+             <Message Id="e" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-07-28 12:42:46Z">
+              <Issue Name="MemberParameterMoreMeaningfulName">
+               <Item>'AbstractExperiment.RaiseMeasurementEvent(MeasurementEventArgs)'</Item>
+               <Item>'e'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="UseEventsWhereAppropriate" Category="Microsoft.Design" CheckId="CA1030" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'AbstractExperiment.RaiseMeasurementEvent(MeasurementEventArgs)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#StartMeasurement()">
+            <Messages>
+             <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2009-07-28 12:42:46Z">
+              <Issue Name="TooGeneric">
+               <Item>'AbstractExperiment.StartMeasurement()'</Item>
+               <Item>'ApplicationException'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="AbstractSettings">
+          <Messages>
+           <Message TypeName="IdentifiersShouldDifferByMoreThanCase" Category="Microsoft.Naming" CheckId="CA1708" Created="2009-07-28 12:42:46Z">
+            <Issue Name="Member">
+             <Item>'DotsPerFrame'</Item>
+             <Item>dotsPerFrame</Item>
+            </Issue>
+            <Issue Name="Member">
+             <Item>'LegendVisible'</Item>
+             <Item>legendVisible</Item>
+            </Issue>
+            <Issue Name="Member">
+             <Item>'Series1Legend'</Item>
+             <Item>series1Legend</Item>
+            </Issue>
+            <Issue Name="Member">
+             <Item>'autoScroll'</Item>
+             <Item>AutoScroll</Item>
+            </Issue>
+            <Issue Name="Member">
+             <Item>'measurementPeriod'</Item>
+             <Item>MeasurementPeriod</Item>
+            </Issue>
+            <Issue Name="Member">
+             <Item>'saveMode'</Item>
+             <Item>SaveMode</Item>
+            </Issue>
+            <Issue Name="Member">
+             <Item>'y1Transform'</Item>
+             <Item>Y1Transform</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#autoScroll">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'AbstractSettings.autoScroll'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#dotsPerFrame">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'AbstractSettings.dotsPerFrame'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#formBuilder_SettingsCreated(System.Object,System.EventArgs)">
+            <Messages>
+             <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'AbstractSettings.formBuilder_SettingsCreated(object, EventArgs)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetPropertyValue`1(System.Reflection.PropertyInfo)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'AbstractSettings.GetPropertyValue&lt;T&gt;(PropertyInfo)'</Item>
+               <Item>'object'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="GenericMethodsShouldProvideTypeParameter" Category="Microsoft.Design" CheckId="CA1004" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'AbstractSettings.GetPropertyValue&lt;T&gt;(PropertyInfo)'</Item>
+               <Item>'T'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#legendVisible">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'AbstractSettings.legendVisible'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#measurementPeriod">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'AbstractSettings.measurementPeriod'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#saveMode">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'AbstractSettings.saveMode'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#series1Legend">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'AbstractSettings.series1Legend'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#y1Transform">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'AbstractSettings.y1Transform'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="BooleanAttribute">
+          <Members>
+           <Member Name="#Default">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'BooleanAttribute.Default'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ControlsManager">
+          <Members>
+           <Member Name="#FindControls`1(System.Windows.Forms.Control)">
+            <Messages>
+             <Message TypeName="GenericMethodsShouldProvideTypeParameter" Category="Microsoft.Design" CheckId="CA1004" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'ControlsManager.FindControls&lt;T&gt;(this Control)'</Item>
+               <Item>'T'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="EnumAttribute">
+          <Members>
+           <Member Name="#Default">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'EnumAttribute.Default'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnumType">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'EnumAttribute.EnumType'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ErrorLogProvider">
+          <Members>
+           <Member Name="#.cctor()">
+            <Messages>
+             <Message TypeName="InitializeReferenceTypeStaticFieldsInline" Category="Microsoft.Performance" CheckId="CA1810" Created="2009-07-28 20:41:09Z">
+              <Issue>
+               <Item>'ErrorLogProvider'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Created="2009-07-28 20:41:09Z">
+              <Issue>
+               <Item>'ErrorLogProvider.ErrorLogProvider()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="Extender">
+          <Members>
+           <Member Name="#ToString(System.Enum,System.Int32)">
+            <Messages>
+             <Message Id="o" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-07-28 12:42:46Z">
+              <Issue Name="MemberParameterMoreMeaningfulName">
+               <Item>'Extender.ToString(this Enum, int)'</Item>
+               <Item>'o'</Item>
+              </Issue>
+             </Message>
+             <Message Id="dummy" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2009-07-28 12:42:46Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'dummy'</Item>
+               <Item>'Extender.ToString(this Enum, int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="IChart">
+          <Members>
+           <Member Name="#AddPoint(Common.Point3D)">
+            <Messages>
+             <Message Id="p" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-07-28 12:42:46Z">
+              <Issue Name="MemberParameterMoreMeaningfulName">
+               <Item>'IChart.AddPoint(Point3D)'</Item>
+               <Item>'p'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="MeasPoint">
+          <Messages>
+           <Message TypeName="OverrideEqualsAndOperatorEqualsOnValueTypes" Category="Microsoft.Performance" CheckId="CA1815" Created="2009-07-28 12:42:46Z">
+            <Issue Name="Equals">
+             <Item>'MeasPoint'</Item>
+            </Issue>
+            <Issue Name="op_Equality">
+             <Item>'MeasPoint'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#Start">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'MeasPoint.Start'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Stop">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'MeasPoint.Stop'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ToString()">
+            <Messages>
+             <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'string.Format(string, object, object)'</Item>
+               <Item>'MeasPoint.ToString()'</Item>
+               <Item>'string.Format(IFormatProvider, string, params object[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="NumericAttribute">
+          <Members>
+           <Member Name="#Default">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'NumericAttribute.Default'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Increment">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'NumericAttribute.Increment'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#MaxValue">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'NumericAttribute.MaxValue'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#MinValue">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'NumericAttribute.MinValue'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="Point3D">
+          <Messages>
+           <Message TypeName="OverrideEqualsAndOperatorEqualsOnValueTypes" Category="Microsoft.Performance" CheckId="CA1815" Created="2009-07-28 12:42:46Z">
+            <Issue Name="Equals">
+             <Item>'Point3D'</Item>
+            </Issue>
+            <Issue Name="op_Equality">
+             <Item>'Point3D'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#.ctor(System.Double,System.Double)">
+            <Messages>
+             <Message Id="x" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-07-28 12:42:46Z">
+              <Issue Name="MemberParameterMoreMeaningfulName">
+               <Item>'Point3D.Point3D(double, double)'</Item>
+               <Item>'x'</Item>
+              </Issue>
+             </Message>
+             <Message Id="y" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-07-28 12:42:46Z">
+              <Issue Name="MemberParameterMoreMeaningfulName">
+               <Item>'Point3D.Point3D(double, double)'</Item>
+               <Item>'y'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#.ctor(System.Double,System.Double,System.Double)">
+            <Messages>
+             <Message Id="x" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-07-28 12:42:46Z">
+              <Issue Name="MemberParameterMoreMeaningfulName">
+               <Item>'Point3D.Point3D(double, double, double)'</Item>
+               <Item>'x'</Item>
+              </Issue>
+             </Message>
+             <Message Id="y" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-07-28 12:42:46Z">
+              <Issue Name="MemberParameterMoreMeaningfulName">
+               <Item>'Point3D.Point3D(double, double, double)'</Item>
+               <Item>'y'</Item>
+              </Issue>
+             </Message>
+             <Message Id="z" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-07-28 12:42:46Z">
+              <Issue Name="MemberParameterMoreMeaningfulName">
+               <Item>'Point3D.Point3D(double, double, double)'</Item>
+               <Item>'z'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ToString()">
+            <Messages>
+             <Message Id="System.String.Format(System.String,System.Object,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'string.Format(string, object, object, object)'</Item>
+               <Item>'Point3D.ToString()'</Item>
+               <Item>'string.Format(IFormatProvider, string, params object[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#X">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'Point3D.X'</Item>
+              </Issue>
+             </Message>
+             <Message Id="X" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-07-28 12:42:46Z">
+              <Issue Name="MemberMoreMeaningfulName">
+               <Item>'Point3D.X'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Y">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'Point3D.Y'</Item>
+              </Issue>
+             </Message>
+             <Message Id="Y" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-07-28 12:42:46Z">
+              <Issue Name="MemberMoreMeaningfulName">
+               <Item>'Point3D.Y'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Z">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'Point3D.Z'</Item>
+              </Issue>
+             </Message>
+             <Message Id="Z" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-07-28 12:42:46Z">
+              <Issue Name="MemberMoreMeaningfulName">
+               <Item>'Point3D.Z'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="RawData">
+          <Members>
+           <Member Name="#.ctor(Common.AbstractSettings)">
+            <Messages>
+             <Message TypeName="DoNotInitializeUnnecessarily" Category="Microsoft.Performance" CheckId="CA1805" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'RawData.RawData(AbstractSettings)'</Item>
+               <Item>'RawData.currentNum'</Item>
+               <Item>'int'</Item>
+               <Item>0</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#AddPoint(Common.Point3D)">
+            <Messages>
+             <Message Id="p" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-07-28 12:42:46Z">
+              <Issue Name="MemberParameterMoreMeaningfulName">
+               <Item>'RawData.AddPoint(Point3D)'</Item>
+               <Item>'p'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ProcessMeasurementEvent(System.Object,Common.MeasurementEventArgs)">
+            <Messages>
+             <Message Id="e" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-07-28 12:42:46Z">
+              <Issue Name="MemberParameterMoreMeaningfulName">
+               <Item>'RawData.ProcessMeasurementEvent(object, MeasurementEventArgs)'</Item>
+               <Item>'e'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SavePoint(Common.Point3D)">
+            <Messages>
+             <Message Id="p" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-07-28 12:42:46Z">
+              <Issue Name="MemberParameterMoreMeaningfulName">
+               <Item>'RawData.SavePoint(Point3D)'</Item>
+               <Item>'p'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="RuntimeSaver">
+          <Members>
+           <Member Name="#SaveAllDataToFile(System.String)">
+            <Messages>
+             <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2009-07-28 12:42:46Z">
+              <Issue Name="Reserved">
+               <Item>'RuntimeSaver.SaveAllDataToFile(string)'</Item>
+               <Item>'AccessViolationException'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SavePoint(Common.Point3D)">
+            <Messages>
+             <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2009-07-28 12:42:46Z">
+              <Issue Name="Reserved">
+               <Item>'RuntimeSaver.SavePoint(Point3D)'</Item>
+               <Item>'AccessViolationException'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="SaveMode">
+          <Members>
+           <Member Name="#DontSave">
+            <Messages>
+             <Message Id="Dont" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Created="2009-07-28 12:42:46Z">
+              <Issue Name="Member">
+               <Item>Dont</Item>
+               <Item>'SaveMode.DontSave'</Item>
+               <Item>DoNot</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="SetByUserAttribute">
+          <Members>
+           <Member Name="#Caption">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'SetByUserAttribute.Caption'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Category">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'SetByUserAttribute.Category'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="SettingsFormBuilder">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2009-07-28 12:42:46Z">
+            <Issue>
+             <Item>'SettingsFormBuilder'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#CreateControlIfPropertyIsEnum(System.Reflection.PropertyInfo)">
+            <Messages>
+             <Message Id="System.Convert.ChangeType(System.Object,System.Type)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'Convert.ChangeType(object, Type)'</Item>
+               <Item>'SettingsFormBuilder.CreateControlIfPropertyIsEnum(PropertyInfo)'</Item>
+               <Item>'Convert.ChangeType(object, Type, IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="TextAttribute">
+          <Members>
+           <Member Name="#Default">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'TextAttribute.Default'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#LineCount">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'TextAttribute.LineCount'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#MaxLength">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'TextAttribute.MaxLength'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="Transform">
+          <Members>
+           <Member Name="#.cctor()">
+            <Messages>
+             <Message TypeName="InitializeReferenceTypeStaticFieldsInline" Category="Microsoft.Performance" CheckId="CA1810" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'Transform'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Call(Common.Transform+Functions,System.Double)">
+            <Messages>
+             <Message Id="x" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-07-28 12:42:46Z">
+              <Issue Name="MemberParameterMoreMeaningfulName">
+               <Item>'Transform.Call(this Transform.Functions, double)'</Item>
+               <Item>'x'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="Transform+Functions">
+          <Messages>
+           <Message TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034" Created="2009-07-28 12:42:46Z">
+            <Issue>
+             <Item>'Transform.Functions'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="TwoDevicesSettings">
+          <Messages>
+           <Message TypeName="IdentifiersShouldDifferByMoreThanCase" Category="Microsoft.Naming" CheckId="CA1708" Created="2009-07-28 12:42:46Z">
+            <Issue Name="Member">
+             <Item>'PlotMode'</Item>
+             <Item>plotMode</Item>
+            </Issue>
+            <Issue Name="Member">
+             <Item>'y2Transform'</Item>
+             <Item>Y2Transform</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#plotMode">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'TwoDevicesSettings.plotMode'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#y2Transform">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'TwoDevicesSettings.y2Transform'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="WpfSettingsFormBuilder">
+          <Members>
+           <Member Name="#CreateControlIfPropertyIsEnum(System.Reflection.PropertyInfo,Common.UserTypeAttribute)">
+            <Messages>
+             <Message Id="System.Convert.ChangeType(System.Object,System.Type)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'Convert.ChangeType(object, Type)'</Item>
+               <Item>'WpfSettingsFormBuilder.CreateControlIfPropertyIsEnum(PropertyInfo, UserTypeAttribute)'</Item>
+               <Item>'Convert.ChangeType(object, Type, IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Common.WPF">
+        <Types>
+         <Type Name="WpfControlsManager">
+          <Members>
+           <Member Name="#FindControls`1(System.Windows.Controls.Panel)">
+            <Messages>
+             <Message TypeName="GenericMethodsShouldProvideTypeParameter" Category="Microsoft.Design" CheckId="CA1004" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'WpfControlsManager.FindControls&lt;T&gt;(this Panel)'</Item>
+               <Item>'T'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+   <Target Name="$(ProjectDir)/_bin/Debug/MeasurementStudio.exe">
+    <Modules>
+     <Module Name="measurementstudio.exe">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2009-07-28 12:42:46Z">
+        <Issue Name="NoStrongName">
+         <Item>'MeasurementStudio.exe'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Created="2009-07-28 12:42:46Z">
+        <Issue>
+         <Item>'MeasurementStudio.exe'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824" Created="2009-07-28 12:42:46Z">
+        <Issue>
+         <Item>'MeasurementStudio.exe'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="MeasurementStudio">
+        <Types>
+         <Type Name="AboutBox">
+          <Members>
+           <Member Name="#.ctor()">
+            <Messages>
+             <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'string.Format(string, object)'</Item>
+               <Item>'AboutBox.AboutBox()'</Item>
+               <Item>'string.Format(IFormatProvider, string, params object[])'</Item>
+              </Issue>
+              <Issue>
+               <Item>'string.Format(string, object)'</Item>
+               <Item>'AboutBox.AboutBox()'</Item>
+               <Item>'string.Format(IFormatProvider, string, params object[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#AssemblyCompany">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2009-07-28 12:42:46Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'AboutBox.AssemblyCompany'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#AssemblyCopyright">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2009-07-28 12:42:46Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'AboutBox.AssemblyCopyright'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#AssemblyDescription">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2009-07-28 12:42:46Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'AboutBox.AssemblyDescription'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#AssemblyProduct">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2009-07-28 12:42:46Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'AboutBox.AssemblyProduct'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#AssemblyTitle">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2009-07-28 12:42:46Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'AboutBox.AssemblyTitle'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+            <Accessors>
+             <Accessor Name="#get_AssemblyTitle()">
+              <Messages>
+               <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Created="2009-07-28 12:42:46Z">
+                <Issue Name="IsNullOrEmpty">
+                 <Item>'string.operator !=(string, string)'</Item>
+                 <Item>'AboutBox.AssemblyTitle.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#AssemblyVersion">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2009-07-28 12:42:46Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'AboutBox.AssemblyVersion'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ChoiceOfConfiguration">
+          <Members>
+           <Member Name="#bNext_Click(System.Object,System.EventArgs)">
+            <Messages>
+             <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'ChoiceOfConfiguration.bNext_Click(object, EventArgs)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="LoadSettingsException">
+          <Messages>
+           <Message TypeName="ImplementStandardExceptionConstructors" Category="Microsoft.Design" CheckId="CA1032" Created="2009-07-28 12:42:46Z">
+            <Issue Name="MissingConstructor">
+             <Item>'LoadSettingsException'</Item>
+             <Item>protected LoadSettingsException(SerializationInfo, StreamingContext)</Item>
+            </Issue>
+            <Issue Name="MissingConstructor">
+             <Item>'LoadSettingsException'</Item>
+             <Item>public LoadSettingsException(String)</Item>
+            </Issue>
+            <Issue Name="MissingConstructor">
+             <Item>'LoadSettingsException'</Item>
+             <Item>public LoadSettingsException(String, Exception)</Item>
+            </Issue>
+           </Message>
+           <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Created="2009-07-28 12:42:46Z">
+            <Issue Certainty="95" Level="Error">
+             <Item>'LoadSettingsException'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#Errors">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'LoadSettingsException.Errors'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'List&lt;string&gt;'</Item>
+               <Item>'LoadSettingsException.Errors'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="MainForm">
+          <Members>
+           <Member Name="#choiceOfConfigurationToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <Messages>
+             <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'MainForm.choiceOfConfigurationToolStripMenuItem_Click(object, EventArgs)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="MSChartProxy">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2009-07-28 12:42:46Z">
+            <Issue>
+             <Item>'MSChartProxy'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="PluginsManager">
+          <Members>
+           <Member Name="#GetExperimentModeFromAssembly(System.Reflection.Assembly)">
+            <Messages>
+             <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2009-07-28 12:42:46Z">
+              <Issue Name="TooGeneric">
+               <Item>'PluginsManager.GetExperimentModeFromAssembly(Assembly)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#LoadRulesFromDlls(System.String)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'PluginsManager.LoadRulesFromDlls(string)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+   <Target Name="$(ProjectDir)/_bin/Debug/Plugins/B7_78_Experiment.dll">
+    <Modules>
+     <Module Name="b7_78_experiment.dll">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2009-07-28 20:41:09Z">
+        <Issue Name="NoStrongName">
+         <Item>'B7_78_Experiment.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Created="2009-07-28 20:41:09Z">
+        <Issue Name="Assembly">
+         <Item>'B7_78_Experiment.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Created="2009-07-28 20:41:09Z">
+        <Issue>
+         <Item>'B7_78_Experiment.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="B7_78_Experiment">
+        <Types>
+         <Type Name="Experiment">
+          <Messages>
+           <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Created="2009-07-28 20:41:09Z" FixCategory="DependsOnFix">
+            <Issue Name="DependsOnFix">
+             <Item>'Experiment'</Item>
+             <Item>'VoltmeterControl'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#TryConnect()">
+            <Messages>
+             <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2009-07-28 20:41:09Z">
+              <Issue>
+               <Item>'string.Format(string, object)'</Item>
+               <Item>'Experiment.TryConnect()'</Item>
+               <Item>'string.Format(IFormatProvider, string, params object[])'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Created="2009-07-28 20:41:09Z">
+              <Issue>
+               <Item>'Experiment.TryConnect()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+   <Target Name="$(ProjectDir)/_bin/Debug/Plugins/Stub_Experiment.dll">
+    <Modules>
+     <Module Name="stub_experiment.dll">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2009-07-28 12:42:46Z">
+        <Issue Name="NoStrongName">
+         <Item>'Stub_Experiment.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Created="2009-07-28 12:42:46Z">
+        <Issue Name="Assembly">
+         <Item>'Stub_Experiment.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Created="2009-07-28 12:42:46Z">
+        <Issue>
+         <Item>'Stub_Experiment.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="Stub_Experiment">
+        <Types>
+         <Type Name="Experiment">
+          <Messages>
+           <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Created="2009-07-28 12:42:46Z" FixCategory="DependsOnFix">
+            <Issue Name="DependsOnFix">
+             <Item>'Experiment'</Item>
+             <Item>'Timer'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#.ctor()">
+            <Messages>
+             <Message TypeName="DoNotUseTimersThatPreventPowerStateChanges" Category="Microsoft.Mobility" CheckId="CA1601" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'Timer.Interval.set(int)'</Item>
+               <Item>'Experiment.Experiment()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+   <Target Name="$(ProjectDir)/_bin/Debug/Voltmeter.dll">
+    <Modules>
+     <Module Name="voltmeter.dll">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2009-07-28 12:42:46Z">
+        <Issue Name="NoStrongName">
+         <Item>'Voltmeter.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Created="2009-07-28 12:42:46Z">
+        <Issue>
+         <Item>'Voltmeter.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="">
+        <Types>
+         <Type Name="visa32">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2009-07-28 12:42:46Z">
+            <Issue>
+             <Item>'visa32'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#viAssertIntrSignal(System.Int32,System.Int16,System.Int32)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viAssertIntrSignal(int, short, int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viAssertTrigger(System.Int32,System.Int16)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viAssertTrigger(int, short)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viAssertUtilSignal(System.Int32,System.Int16)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viAssertUtilSignal(int, short)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viBufRead(System.Int32,System.Byte[],System.Int32,System.Int32&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viBufRead(int, byte[], int, out int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viBufWrite(System.Int32,System.Byte[],System.Int32,System.Int32&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viBufWrite(int, byte[], int, out int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viClear(System.Int32)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viClear(int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viClose(System.Int32)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viClose(int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viDisableEvent(System.Int32,System.Int32,System.Int16)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viDisableEvent(int, int, short)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viDiscardEvents(System.Int32,System.Int32,System.Int16)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viDiscardEvents(int, int, short)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viEnableEvent(System.Int32,System.Int32,System.Int16,System.Int32)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viEnableEvent(int, int, short, int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viFindNext(System.Int32,System.Text.StringBuilder)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viFindNext(int, StringBuilder)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'desc'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viFindRsrc(System.Int32,System.String,System.Int32&amp;,System.Int32&amp;,System.Text.StringBuilder)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viFindRsrc(int, string, out int, out int, StringBuilder)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'expr'</Item>
+              </Issue>
+             </Message>
+             <Message Id="4" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'desc'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viFlush(System.Int32,System.Int16)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viFlush(int, short)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viGetAttribute(System.Int32,System.Int32,System.Byte&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viGetAttribute(int, int, out byte)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viGetAttribute(System.Int32,System.Int32,System.Int16&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viGetAttribute(int, int, out short)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viGetAttribute(System.Int32,System.Int32,System.Int32&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viGetAttribute(int, int, out int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viGetAttribute(System.Int32,System.Int32,System.Text.StringBuilder)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viGetAttribute(int, int, StringBuilder)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'attrValue'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viGetDefaultRM(System.Int32&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viGetDefaultRM(out int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viGpibCommand(System.Int32,System.String,System.Int32,System.Int32&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viGpibCommand(int, string, int, out int)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viGpibControlATN(System.Int32,System.Int16)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viGpibControlATN(int, short)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viGpibControlREN(System.Int32,System.Int16)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viGpibControlREN(int, short)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viGpibPassControl(System.Int32,System.Int16,System.Int16)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viGpibPassControl(int, short, short)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viGpibSendIFC(System.Int32)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viGpibSendIFC(int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viIn16(System.Int32,System.Int16,System.Int32,System.Int16&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viIn16(int, short, int, out short)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viIn32(System.Int32,System.Int16,System.Int32,System.Int32&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viIn32(int, short, int, out int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viIn8(System.Int32,System.Int16,System.Int32,System.Byte&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viIn8(int, short, int, out byte)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viLock(System.Int32,System.Int32,System.Int32,System.String,System.Text.StringBuilder)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viLock(int, int, int, string, StringBuilder)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="3" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'requestedKey'</Item>
+              </Issue>
+             </Message>
+             <Message Id="4" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'accessKey'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viMapAddress(System.Int32,System.Int16,System.Int32,System.Int32,System.Int16,System.Int32,System.Int32&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viMapAddress(int, short, int, int, short, int, out int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viMapTrigger(System.Int32,System.Int16,System.Int16,System.Int16)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viMapTrigger(int, short, short, short)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viMemAlloc(System.Int32,System.Int32,System.Int32&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viMemAlloc(int, int, out int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viMemFree(System.Int32,System.Int32)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viMemFree(int, int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viMove(System.Int32,System.Int16,System.Int32,System.Int16,System.Int16,System.Int32,System.Int16,System.Int32)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viMove(int, short, int, short, short, int, short, int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viMoveAsync(System.Int32,System.Int16,System.Int32,System.Int16,System.Int16,System.Int32,System.Int16,System.Int32,System.Int32&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viMoveAsync(int, short, int, short, short, int, short, int, out int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viMoveIn16(System.Int32,System.Int16,System.Int32,System.Int32,System.Int16[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viMoveIn16(int, short, int, int, short[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viMoveIn32(System.Int32,System.Int16,System.Int32,System.Int32,System.Int32[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viMoveIn32(int, short, int, int, int[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viMoveIn8(System.Int32,System.Int16,System.Int32,System.Int32,System.Byte[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viMoveIn8(int, short, int, int, byte[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viMoveOut16(System.Int32,System.Int16,System.Int32,System.Int32,System.Int16[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viMoveOut16(int, short, int, int, short[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viMoveOut32(System.Int32,System.Int16,System.Int32,System.Int32,System.Int32[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viMoveOut32(int, short, int, int, int[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viMoveOut8(System.Int32,System.Int16,System.Int32,System.Int32,System.Byte[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viMoveOut8(int, short, int, int, byte[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viOpen(System.Int32,System.String,System.Int32,System.Int32,System.Int32&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viOpen(int, string, int, int, out int)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'viDesc'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viOpenDefaultRM(System.Int32&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viOpenDefaultRM(out int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viOut16(System.Int32,System.Int16,System.Int32,System.Int16)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viOut16(int, short, int, short)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viOut32(System.Int32,System.Int16,System.Int32,System.Int32)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viOut32(int, short, int, int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viOut8(System.Int32,System.Int16,System.Int32,System.Byte)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viOut8(int, short, int, byte)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viParseRsrc(System.Int32,System.String,System.Int16&amp;,System.Int16&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viParseRsrc(int, string, ref short, ref short)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'desc'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viParseRsrcEx(System.Int32,System.String,System.Int16&amp;,System.Int16&amp;,System.Text.StringBuilder,System.Text.StringBuilder,System.Text.StringBuilder)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viParseRsrcEx(int, string, ref short, ref short, StringBuilder, StringBuilder, StringBuilder)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'desc'</Item>
+              </Issue>
+             </Message>
+             <Message Id="4" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'rsrcClass'</Item>
+              </Issue>
+             </Message>
+             <Message Id="5" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'expandedUnaliasedName'</Item>
+              </Issue>
+             </Message>
+             <Message Id="6" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'aliasIfExists'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viPeek16(System.Int32,System.Int32,System.Int16&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viPeek16(int, int, out short)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viPeek32(System.Int32,System.Int32,System.Int32&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viPeek32(int, int, out int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viPeek8(System.Int32,System.Int32,System.Byte&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viPeek8(int, int, out byte)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viPoke16(System.Int32,System.Int32,System.Int16)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viPoke16(int, int, short)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viPoke32(System.Int32,System.Int32,System.Int32)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viPoke32(int, int, int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viPoke8(System.Int32,System.Int32,System.Byte)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viPoke8(int, int, byte)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viPrintf(System.Int32,System.String)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viPrintf(int, string)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'writeFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viPrintf(System.Int32,System.String,System.Byte)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viPrintf(int, string, byte)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'writeFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viPrintf(System.Int32,System.String,System.Byte[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viPrintf(int, string, byte[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'writeFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viPrintf(System.Int32,System.String,System.Double)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viPrintf(int, string, double)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'writeFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viPrintf(System.Int32,System.String,System.Double[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viPrintf(int, string, double[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'writeFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viPrintf(System.Int32,System.String,System.Int16)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viPrintf(int, string, short)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'writeFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viPrintf(System.Int32,System.String,System.Int16[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viPrintf(int, string, short[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'writeFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viPrintf(System.Int32,System.String,System.Int32)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viPrintf(int, string, int)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'writeFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viPrintf(System.Int32,System.String,System.Int32[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viPrintf(int, string, int[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'writeFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viPrintf(System.Int32,System.String,System.Single)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viPrintf(int, string, float)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'writeFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viPrintf(System.Int32,System.String,System.Single[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viPrintf(int, string, float[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'writeFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viPrintf(System.Int32,System.String,System.String)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viPrintf(int, string, string)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'writeFmt'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'arg'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viRead(System.Int32,System.Byte[],System.Int32,System.Int32&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viRead(int, byte[], int, out int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viReadAsync(System.Int32,System.Byte[],System.Int32,System.Int32&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viReadAsync(int, byte[], int, out int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viReadSTB(System.Int32,System.Int16&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viReadSTB(int, ref short)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viReadToFile(System.Int32,System.String,System.Int32,System.Int32&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viReadToFile(int, string, int, ref int)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'filename'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viScanf(System.Int32,System.String)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viScanf(int, string)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viScanf(System.Int32,System.String,System.Byte&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viScanf(int, string, out byte)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viScanf(System.Int32,System.String,System.Byte[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viScanf(int, string, byte[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viScanf(System.Int32,System.String,System.Double&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viScanf(int, string, out double)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viScanf(System.Int32,System.String,System.Double[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viScanf(int, string, double[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viScanf(System.Int32,System.String,System.Int16&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viScanf(int, string, out short)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viScanf(System.Int32,System.String,System.Int16[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viScanf(int, string, short[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viScanf(System.Int32,System.String,System.Int32&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viScanf(int, string, out int)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viScanf(System.Int32,System.String,System.Int32&amp;,System.Byte[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viScanf(int, string, ref int, byte[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viScanf(System.Int32,System.String,System.Int32&amp;,System.Double[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viScanf(int, string, ref int, double[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viScanf(System.Int32,System.String,System.Int32&amp;,System.Int16[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viScanf(int, string, ref int, short[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viScanf(System.Int32,System.String,System.Int32&amp;,System.Int32[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viScanf(int, string, ref int, int[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viScanf(System.Int32,System.String,System.Int32&amp;,System.Single[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viScanf(int, string, ref int, float[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viScanf(System.Int32,System.String,System.Int32&amp;,System.Text.StringBuilder)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viScanf(int, string, ref int, StringBuilder)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+             <Message Id="3" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'arg'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viScanf(System.Int32,System.String,System.Int32[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viScanf(int, string, int[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viScanf(System.Int32,System.String,System.Single&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viScanf(int, string, out float)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viScanf(System.Int32,System.String,System.Single[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viScanf(int, string, float[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viScanf(System.Int32,System.String,System.Text.StringBuilder)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viScanf(int, string, StringBuilder)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'arg'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSetAttribute(System.Int32,System.Int32,System.Byte)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSetAttribute(int, int, byte)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSetAttribute(System.Int32,System.Int32,System.Int16)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSetAttribute(int, int, short)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSetAttribute(System.Int32,System.Int32,System.Int32)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSetAttribute(int, int, int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSetBuf(System.Int32,System.Int16,System.Int32)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSetBuf(int, short, int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSPrintf(System.Int32,System.Text.StringBuilder,System.String)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSPrintf(int, StringBuilder, string)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'writeFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSPrintf(System.Int32,System.Text.StringBuilder,System.String,System.Byte)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSPrintf(int, StringBuilder, string, byte)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'writeFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSPrintf(System.Int32,System.Text.StringBuilder,System.String,System.Byte[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSPrintf(int, StringBuilder, string, byte[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'writeFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSPrintf(System.Int32,System.Text.StringBuilder,System.String,System.Double)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSPrintf(int, StringBuilder, string, double)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'writeFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSPrintf(System.Int32,System.Text.StringBuilder,System.String,System.Double[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSPrintf(int, StringBuilder, string, double[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'writeFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSPrintf(System.Int32,System.Text.StringBuilder,System.String,System.Int16)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSPrintf(int, StringBuilder, string, short)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'writeFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSPrintf(System.Int32,System.Text.StringBuilder,System.String,System.Int16[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSPrintf(int, StringBuilder, string, short[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'writeFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSPrintf(System.Int32,System.Text.StringBuilder,System.String,System.Int32)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSPrintf(int, StringBuilder, string, int)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'writeFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSPrintf(System.Int32,System.Text.StringBuilder,System.String,System.Int32[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSPrintf(int, StringBuilder, string, int[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'writeFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSPrintf(System.Int32,System.Text.StringBuilder,System.String,System.Single)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSPrintf(int, StringBuilder, string, float)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'writeFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSPrintf(System.Int32,System.Text.StringBuilder,System.String,System.Single[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSPrintf(int, StringBuilder, string, float[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'writeFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSPrintf(System.Int32,System.Text.StringBuilder,System.String,System.String)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSPrintf(int, StringBuilder, string, string)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'writeFmt'</Item>
+              </Issue>
+             </Message>
+             <Message Id="3" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'arg'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSScanf(System.Int32,System.String,System.String)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSScanf(int, string, string)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSScanf(System.Int32,System.String,System.String,System.Byte&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSScanf(int, string, string, out byte)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSScanf(System.Int32,System.String,System.String,System.Byte[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSScanf(int, string, string, byte[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSScanf(System.Int32,System.String,System.String,System.Double&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSScanf(int, string, string, out double)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSScanf(System.Int32,System.String,System.String,System.Double[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSScanf(int, string, string, double[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSScanf(System.Int32,System.String,System.String,System.Int16&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSScanf(int, string, string, out short)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSScanf(System.Int32,System.String,System.String,System.Int16[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSScanf(int, string, string, short[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSScanf(System.Int32,System.String,System.String,System.Int32&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSScanf(int, string, string, out int)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSScanf(System.Int32,System.String,System.String,System.Int32&amp;,System.Byte[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSScanf(int, string, string, ref int, byte[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSScanf(System.Int32,System.String,System.String,System.Int32&amp;,System.Double[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSScanf(int, string, string, ref int, double[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSScanf(System.Int32,System.String,System.String,System.Int32&amp;,System.Int16[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSScanf(int, string, string, ref int, short[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSScanf(System.Int32,System.String,System.String,System.Int32&amp;,System.Int32[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSScanf(int, string, string, ref int, int[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSScanf(System.Int32,System.String,System.String,System.Int32&amp;,System.Single[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSScanf(int, string, string, ref int, float[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSScanf(System.Int32,System.String,System.String,System.Int32&amp;,System.Text.StringBuilder)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSScanf(int, string, string, ref int, StringBuilder)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+             <Message Id="4" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'arg'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSScanf(System.Int32,System.String,System.String,System.Int32[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSScanf(int, string, string, int[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSScanf(System.Int32,System.String,System.String,System.Single&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSScanf(int, string, string, out float)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSScanf(System.Int32,System.String,System.String,System.Single[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSScanf(int, string, string, float[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viSScanf(System.Int32,System.String,System.String,System.Text.StringBuilder)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viSScanf(int, string, string, StringBuilder)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'buffer'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'readFmt'</Item>
+              </Issue>
+             </Message>
+             <Message Id="3" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'arg'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viStatusDesc(System.Int32,System.Int32,System.Text.StringBuilder)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viStatusDesc(int, int, StringBuilder)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'desc'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viTerminate(System.Int32,System.Int16,System.Int32)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viTerminate(int, short, int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viUnlock(System.Int32)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viUnlock(int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viUnmapAddress(System.Int32)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viUnmapAddress(int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viUnmapTrigger(System.Int32,System.Int16,System.Int16)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viUnmapTrigger(int, short, short)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viUsbControlIn(System.Int32,System.Int16,System.Int16,System.Int16,System.Int16,System.Int16,System.Byte[],System.Int16&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viUsbControlIn(int, short, short, short, short, short, byte[], out short)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viUsbControlOut(System.Int32,System.Int16,System.Int16,System.Int16,System.Int16,System.Int16,System.Byte[])">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viUsbControlOut(int, short, short, short, short, short, byte[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viVxiCommandQuery(System.Int32,System.Int16,System.Int32,System.Int32&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viVxiCommandQuery(int, short, int, out int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viWaitOnEvent(System.Int32,System.Int32,System.Int32,System.Int32&amp;,System.Int32&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viWaitOnEvent(int, int, int, ref int, ref int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viWrite(System.Int32,System.Byte[],System.Int32,System.Int32&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viWrite(int, byte[], int, out int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viWriteAsync(System.Int32,System.Byte[],System.Int32,System.Int32&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viWriteAsync(int, byte[], int, out int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#viWriteFromFile(System.Int32,System.String,System.Int32,System.Int32&amp;)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'visa32.viWriteFromFile(int, string, int, ref int)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2009-07-28 12:42:46Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'filename'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="TSU.Voltmeters">
+        <Types>
+         <Type Name="DataReceivedEventArgs">
+          <Members>
+           <Member Name="#Channel">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'DataReceivedEventArgs.Channel'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Value">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'DataReceivedEventArgs.Value'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="DataReceivedEventHandler">
+          <Messages>
+           <Message TypeName="UseGenericEventHandlerInstances" Category="Microsoft.Design" CheckId="CA1003" Created="2009-07-28 12:42:46Z">
+            <Issue>
+             <Item>'DataReceivedEventHandler'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="MeasurementMode">
+          <Members>
+           <Member Name="#CONTINUITY">
+            <Messages>
+             <Message Id="CONTINUITY" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-07-28 12:42:46Z">
+              <Issue Name="Member">
+               <Item>CONTINUITY</Item>
+               <Item>'MeasurementMode.CONTINUITY'</Item>
+               <Item>Continuity</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#DIODE">
+            <Messages>
+             <Message Id="DIODE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-07-28 12:42:46Z">
+              <Issue Name="Member">
+               <Item>DIODE</Item>
+               <Item>'MeasurementMode.DIODE'</Item>
+               <Item>Diode</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#FRESISTANCE">
+            <Messages>
+             <Message Id="FRESISTANCE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-07-28 12:42:46Z">
+              <Issue Name="Member">
+               <Item>FRESISTANCE</Item>
+               <Item>'MeasurementMode.FRESISTANCE'</Item>
+               <Item>Fresistance</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#MANUAL">
+            <Messages>
+             <Message Id="MANUAL" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-07-28 12:42:46Z">
+              <Issue Name="Member">
+               <Item>MANUAL</Item>
+               <Item>'MeasurementMode.MANUAL'</Item>
+               <Item>Manual</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#PERIOD">
+            <Messages>
+             <Message Id="PERIOD" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-07-28 12:42:46Z">
+              <Issue Name="Member">
+               <Item>PERIOD</Item>
+               <Item>'MeasurementMode.PERIOD'</Item>
+               <Item>Period</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#RESISTENCE">
+            <Messages>
+             <Message Id="RESISTENCE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-07-28 12:42:46Z">
+              <Issue Name="Member">
+               <Item>RESISTENCE</Item>
+               <Item>'MeasurementMode.RESISTENCE'</Item>
+               <Item>Resistence</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#TCOUPLE">
+            <Messages>
+             <Message Id="TCOUPLE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-07-28 12:42:46Z">
+              <Issue Name="Member">
+               <Item>TCOUPLE</Item>
+               <Item>'MeasurementMode.TCOUPLE'</Item>
+               <Item>Tcouple</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#TEMPERATURE">
+            <Messages>
+             <Message Id="TEMPERATURE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-07-28 12:42:46Z">
+              <Issue Name="Member">
+               <Item>TEMPERATURE</Item>
+               <Item>'MeasurementMode.TEMPERATURE'</Item>
+               <Item>Temperature</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#VOLT_AC">
+            <Messages>
+             <Message Id="VOLT" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-07-28 12:42:46Z">
+              <Issue Name="Member">
+               <Item>VOLT</Item>
+               <Item>'MeasurementMode.VOLT_AC'</Item>
+               <Item>Volt</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Created="2009-07-28 12:42:46Z">
+              <Issue Name="Member">
+               <Item>'MeasurementMode.VOLT_AC'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#VOLT_DC">
+            <Messages>
+             <Message Id="VOLT" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-07-28 12:42:46Z">
+              <Issue Name="Member">
+               <Item>VOLT</Item>
+               <Item>'MeasurementMode.VOLT_DC'</Item>
+               <Item>Volt</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Created="2009-07-28 12:42:46Z">
+              <Issue Name="Member">
+               <Item>'MeasurementMode.VOLT_DC'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="VoltmeterControl">
+          <Members>
+           <Member Name="#.ctor()">
+            <Messages>
+             <Message TypeName="DoNotInitializeUnnecessarily" Category="Microsoft.Performance" CheckId="CA1805" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'VoltmeterControl.VoltmeterControl()'</Item>
+               <Item>'VoltmeterControl.components'</Item>
+               <Item>'IContainer'</Item>
+               <Item>null</Item>
+              </Issue>
+              <Issue>
+               <Item>'VoltmeterControl.VoltmeterControl()'</Item>
+               <Item>'VoltmeterControl.connected'</Item>
+               <Item>'bool'</Item>
+               <Item>false</Item>
+              </Issue>
+              <Issue>
+               <Item>'VoltmeterControl.VoltmeterControl()'</Item>
+               <Item>'VoltmeterControl.vi'</Item>
+               <Item>'int'</Item>
+               <Item>0</Item>
+              </Issue>
+              <Issue>
+               <Item>'VoltmeterControl.VoltmeterControl()'</Item>
+               <Item>'VoltmeterControl.videfaultRM'</Item>
+               <Item>'int'</Item>
+               <Item>0</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Dispose(System.Boolean)">
+            <Messages>
+             <Message Id="read_timer" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'VoltmeterControl'</Item>
+               <Item>'VoltmeterControl.read_timer'</Item>
+               <Item>'Timer'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetData()">
+            <Messages>
+             <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'int.ToString()'</Item>
+               <Item>'VoltmeterControl.GetData()'</Item>
+               <Item>'int.ToString(IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetValue()">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'VoltmeterControl.GetValue()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ReadProc(System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'VoltmeterControl.ReadProc(object)'</Item>
+               <Item>'object'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SendCmd(System.String)">
+            <Messages>
+             <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2009-07-28 12:42:46Z">
+              <Issue>
+               <Item>'int.ToString()'</Item>
+               <Item>'VoltmeterControl.SendCmd(string)'</Item>
+               <Item>'int.ToString(IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Setup(System.Collections.Generic.IEnumerable`1&lt;System.String&gt;)">
+            <Messages>
+             <Message Id="commands" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-07-28 12:42:46Z">
+              <Issue Name="MemberParameter">
+               <Item>'VoltmeterControl.Setup(IEnumerable&lt;string&gt;)'</Item>
+               <Item>commands</Item>
+               <Item>'init_commands'</Item>
+               <Item>Commands</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Created="2009-07-28 12:42:46Z">
+              <Issue Name="MemberParameter">
+               <Item>'VoltmeterControl.Setup(IEnumerable&lt;string&gt;)'</Item>
+               <Item>'init_commands'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#DataReceived" Kind="Event">
+            <Messages>
+             <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Created="2009-07-28 12:42:46Z">
+              <Issue Name="Second">
+               <Item>'DataReceivedEventHandler'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="VoltmeterException">
+          <Messages>
+           <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Created="2009-07-28 12:42:46Z">
+            <Issue Certainty="95" Level="Error">
+             <Item>'VoltmeterException'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+  </Targets>
+  <Rules>
+   <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+    <Resolution Name="NoStrongName">Sign {0} with a strong name key.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020">
+    <Resolution Name="Default">Consider merging the types defined in '{0}' with another namespace.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812">
+    <Resolution Name="Default">{0} is an internal class that is apparently never instantiated. If so, remove the code from the assembly. If this class is intended to contain only static methods, consider adding a private constructor to prevent the compiler from generating a default constructor.</Resolution>
+   </Rule>
+   <Rule TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227">
+    <Resolution Name="Default">Change {0} to be read-only by removing the property setter.</Resolution>
+   </Rule>
+   <Rule TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009">
+    <Resolution Name="Second">Declare the second parameter of {0} as an EventArgs, or an instance of a type that extends EventArgs, named 'e'.</Resolution>
+   </Rule>
+   <Rule TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213">
+    <Resolution Name="Default">{0} contains field {1} that is of IDisposable type: {2}. Change the Dispose method on {0} to call Dispose or Close on this field.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031">
+    <Resolution Name="Default">Modify {0} to catch a more specific exception than {1} or rethrow the exception.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotDeclareReadOnlyMutableReferenceTypes" Category="Microsoft.Security" CheckId="CA2104">
+    <Resolution Name="Default">Remove the read-only designation from {0} or change the field to one that is an immutable reference type. If the reference type {1} is, in fact, immutable, exclude this message.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051">
+    <Resolution Name="Default">Because field {0} is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002">
+    <Resolution Name="Default">Change {0} in {1} to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotInitializeUnnecessarily" Category="Microsoft.Performance" CheckId="CA1805">
+    <Resolution Name="Default">{0} initializes field {1} of type {2} to {3}. Remove this initialization because it will be done automatically by the runtime.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201">
+    <Resolution Name="Reserved">{0} creates an exception of type {1}, an exception type that is reserved by the runtime and should never be raised by managed code. If this exception instance might be thrown, use a different exception type.</Resolution>
+    <Resolution Name="TooGeneric">{0} creates an exception of type {1}, an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotUseTimersThatPreventPowerStateChanges" Category="Microsoft.Mobility" CheckId="CA1601">
+    <Resolution Name="Default">Modify the call to {0} in method {1} to set the timer interval to a value that's greater than or equal to one second.</Resolution>
+   </Rule>
+   <Rule TypeName="EnumsShouldHaveZeroValue" Category="Microsoft.Design" CheckId="CA1008">
+    <Resolution Name="NotFlagsNoZeroValue">Add a member to {0} that has a value of zero with a suggested name of 'None'.</Resolution>
+   </Rule>
+   <Rule TypeName="GenericMethodsShouldProvideTypeParameter" Category="Microsoft.Design" CheckId="CA1004">
+    <Resolution Name="Default">Consider a design where {0} doesn't require explicit type parameter {1} in any call to it.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+    <Resolution Name="Assembly">Correct the casing of '{0}' in assembly name {1} by changing it to '{2}'.</Resolution>
+    <Resolution Name="Member">Correct the casing of '{0}' in member name {1} by changing it to '{2}'.</Resolution>
+    <Resolution Name="MemberParameter">In member {0}, correct the casing of '{1}' in parameter name {2} by changing it to '{3}'.</Resolution>
+    <Resolution Name="Namespace">Correct the casing of '{0}' in namespace name '{1}' by changing it to '{2}'.</Resolution>
+    <Resolution Name="Type">Correct the casing of '{0}' in type name {1} by changing it to '{2}'.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704">
+    <Resolution Name="MemberMoreMeaningfulName">Consider providing a more meaningful name than member name {0}.</Resolution>
+    <Resolution Name="MemberParameterMoreMeaningfulName">In method {0}, consider providing a more meaningful name than parameter name {1}.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldDifferByMoreThanCase" Category="Microsoft.Naming" CheckId="CA1708">
+    <Resolution Name="Member">Change member names {0} and '{1}' so that they differ by more than case.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707">
+    <Resolution Name="Assembly">Remove the underscores from assembly name {0}.</Resolution>
+    <Resolution Name="Member">Remove the underscores from member name {0}.</Resolution>
+    <Resolution Name="MemberParameter">In member {0}, remove the underscores from parameter name {1}.</Resolution>
+    <Resolution Name="Namespace">Remove the underscores from namespace name '{0}'.</Resolution>
+   </Rule>
+   <Rule TypeName="ImplementStandardExceptionConstructors" Category="Microsoft.Design" CheckId="CA1032">
+    <Resolution Name="MissingConstructor">Add the following constructor to {0}: {1}.</Resolution>
+   </Rule>
+   <Rule TypeName="InitializeReferenceTypeStaticFieldsInline" Category="Microsoft.Performance" CheckId="CA1810">
+    <Resolution Name="Default">Initialize all static fields in {0} when those fields are declared and remove the explicit static constructor.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+    <Resolution Name="Default">Mark {0} with CLSCompliant(true) because it exposes externally visible types.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824">
+    <Resolution Name="Default">Because assembly {0} contains a ResX-based resource file, mark it with the NeutralResourcesLanguage attribute, specifying the language of the resources within the assembly. This could improve lookup performance the first time a resource is retrieved.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237">
+    <Resolution Name="Default">Add [Serializable] to {0} as this type implements ISerializable.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822">
+    <Resolution Name="Default">The 'this' parameter (or 'Me' in Visual Basic) of {0} is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Resolution>
+   </Rule>
+   <Rule TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060">
+    <Resolution Name="Default">Because it is a P/Invoke method, {0} should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Resolution>
+   </Rule>
+   <Rule TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034">
+    <Resolution Name="Default">Do not nest type {0}. Alternatively, change its accessibility so that it is not externally visible.</Resolution>
+   </Rule>
+   <Rule TypeName="OverrideEqualsAndOperatorEqualsOnValueTypes" Category="Microsoft.Performance" CheckId="CA1815">
+    <Resolution Name="Equals">{0} should override Equals.</Resolution>
+    <Resolution Name="op_Equality">{0} should override the equality (==) and inequality (!=) operators.</Resolution>
+   </Rule>
+   <Rule TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801">
+    <Resolution Name="Default">Parameter {0} of {1} is never used. Remove the parameter or use it in the method body.</Resolution>
+   </Rule>
+   <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+    <Resolution Name="Default">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Resolution>
+   </Rule>
+   <Rule TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101">
+    <Resolution Name="ParameterImplicitAnsi">To reduce security risk, marshal parameter {0} as Unicode, by setting DllImport.CharSet to CharSet.Unicode, or by explicitly marshaling the parameter as UnmanagedType.LPWStr. If you need to marshal this string as ANSI or system-dependent, specify MarshalAs explicitly, and set BestFitMapping=false; for added security, also set ThrowOnUnmappableChar=true.</Resolution>
+   </Rule>
+   <Rule TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300">
+    <Resolution Name="Default">Change {0} to call the MessageBox.Show overload that specifies MessageBoxOptions, and make sure to set MessageBoxOptions.RightAlign and MessageBoxOptions.RtlReading if RightToLeft is set to RightToLeft.Yes on the parent control.</Resolution>
+   </Rule>
+   <Rule TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820">
+    <Resolution Name="IsNullOrEmpty">Replace the call to {0} in {1} with a call to 'String.IsNullOrEmpty'.</Resolution>
+   </Rule>
+   <Rule TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001">
+    <Resolution Name="DependsOnFix">Implement IDisposable on {0} because it creates members of the following IDisposable types: {1}. If {0} has previously shipped, adding new members that implement IDisposable to this type is considered a breaking change to existing consumers.</Resolution>
+   </Rule>
+   <Rule TypeName="UseEventsWhereAppropriate" Category="Microsoft.Design" CheckId="CA1030">
+    <Resolution Name="Default">Consider making {0} an event.</Resolution>
+   </Rule>
+   <Rule TypeName="UseGenericEventHandlerInstances" Category="Microsoft.Design" CheckId="CA1003">
+    <Resolution Name="Default">Remove {0} and replace its usage with EventHandler&lt;T&gt;</Resolution>
+   </Rule>
+   <Rule TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726">
+    <Resolution Name="Member">Replace the term '{0}' in member name {1} with the preferred alternate '{2}'.</Resolution>
+   </Rule>
+   <Rule TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024">
+    <Resolution Name="Default">Change {0} to a property if appropriate.</Resolution>
+   </Rule>
+  </Rules>
+ </FxCopReport>
+</FxCopProject>
