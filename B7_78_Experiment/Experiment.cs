@@ -1,7 +1,6 @@
 ﻿using System;
 using Common;
 using TSU.Voltmeters;
-using Point3D=Common.Point3D;
 using System.Windows.Forms;
 
 namespace B7_78_Experiment
@@ -26,13 +25,12 @@ namespace B7_78_Experiment
         public override void ApplySettingsToChart(IChart chart)
         {
             base.ApplySettingsToChart(chart);
-            chart.Caption = CustomSettings.ChartCaption; 
         }
 
         private void OnDataReceived(object sender, DataReceivedEventArgs args)
         {
             var y = CustomSettings.Y1Transform.Call(args.Value);
-            var point = new Point3D(count*1e-3*B7_78.Interval, y);
+            var point = new Point3D(count * 1e-3 * Settings.MeasurementPeriod, y);
             Chart.AddPoint(point);
             Data.SavePoint(point);
             count++;
