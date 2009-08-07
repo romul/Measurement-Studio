@@ -8,8 +8,8 @@
     <ProjectGuid>{9E0EC04F-2C24-41E9-AC1E-59ECC89FF873}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>APPA_Multimeter</RootNamespace>
-    <AssemblyName>APPA_Multimeter</AssemblyName>
+    <RootNamespace>Tsu.Voltmeters.Appa</RootNamespace>
+    <AssemblyName>AppaMultimeter</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -49,18 +49,18 @@
   <ItemGroup>
     <Compile Include="Enums.cs" />
     <Compile Include="Events.cs" />
-    <Compile Include="Multimeter109nControl.cs">
+    <Compile Include="Multimeter109NControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Multimeter109nControl.Designer.cs">
-      <DependentUpon>Multimeter109nControl.cs</DependentUpon>
+    <Compile Include="Multimeter109NControl.Designer.cs">
+      <DependentUpon>Multimeter109NControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Multimeter109nControl.resx">
-      <DependentUpon>Multimeter109nControl.cs</DependentUpon>
+    <EmbeddedResource Include="Multimeter109NControl.resx">
+      <DependentUpon>Multimeter109NControl.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>

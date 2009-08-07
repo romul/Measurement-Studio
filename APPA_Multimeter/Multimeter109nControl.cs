@@ -8,9 +8,9 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO.Ports;
 
-namespace TSU.Voltmeters.APPA
+namespace Tsu.Voltmeters.Appa
 {
-    public partial class Multimeter109nControl : Component
+    public partial class Multimeter109NControl : Component
     {
         /// <summary>
         /// COM-порт, который эмулируется поверх USB
@@ -59,10 +59,10 @@ namespace TSU.Voltmeters.APPA
         [Description("Событие, возникающее после снятия показания с мультиметра")]
         [Category("Embedded Event")]
         [DisplayName("OnDataReceived")]
-        public event DataReceivedEventHandler DataReceived;
+        public event EventHandler<DataReceivedEventArgs> DataReceived;
 
 
-        public Multimeter109nControl()
+        public Multimeter109NControl()
         {
             InitializeComponent();
             com2usb.ReadTimeout = 500;
@@ -178,7 +178,7 @@ namespace TSU.Voltmeters.APPA
         /// <param name="mode">единицы измерения</param>
         protected virtual void OnDataReceived(double value, double delta, MeasurementMode mode)
         {
-            DataReceivedEventHandler localHandler = DataReceived;
+            var localHandler = DataReceived;
             if (localHandler != null)
             {
                 localHandler(this, new DataReceivedEventArgs(value, delta, mode));

@@ -1,4 +1,4 @@
-﻿namespace TSU.Voltmeters.APPA
+﻿namespace Tsu.Voltmeters.Appa
 {
     /// <summary>
     /// Поддерживаемые компонентом варианты режимов измерения
@@ -13,6 +13,11 @@
     /// </summary>
     public enum MeasurementVelocity
     {
+        /// <summary>
+        /// Default value, не использовать!
+        /// означает неинициализированное состояние
+        /// </summary>
+        None,
         /// <summary>
         /// Цифровая шкала -> 2 изм/с
         /// </summary>

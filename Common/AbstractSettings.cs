@@ -173,7 +173,7 @@ namespace Common
         void formBuilder_SettingsCreated(object sender, EventArgs e)
         {
             this.SaveToFile();
-            MessageBox.Show(this.ToString());
+            ErrorLogProvider.ShowInformationMessage(this.ToString());
         }
 
         #endregion

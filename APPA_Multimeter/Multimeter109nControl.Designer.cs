@@ -1,6 +1,6 @@
-﻿namespace TSU.Voltmeters.APPA
+﻿namespace Tsu.Voltmeters.Appa
 {
-    partial class Multimeter109nControl
+    partial class Multimeter109NControl
     {
         /// <summary>
         /// Required designer variable.

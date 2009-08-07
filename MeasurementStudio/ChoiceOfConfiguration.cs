@@ -32,7 +32,7 @@ namespace MeasurementStudio
             }
             else
             {
-                MessageBox.Show("Вы должны выбрать одну из доступных конфигураций!");
+                ErrorLogProvider.ShowInformationMessage("Вы должны выбрать одну из доступных конфигураций!");                
             }
         }
 

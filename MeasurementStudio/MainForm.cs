@@ -37,7 +37,7 @@ namespace MeasurementStudio
             } 
             else
             {
-                MessageBox.Show("Вы не выбрали режим измерений, либо файл настроек не полон");
+                ErrorLogProvider.ShowInformationMessage("Вы не выбрали режим измерений, либо файл настроек не полон");
             }
         }
 

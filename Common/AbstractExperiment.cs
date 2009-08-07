@@ -31,9 +31,6 @@ namespace Common
         /// </summary>
         protected string ExperimentCaption { get; set; }
 
-        protected readonly IList<Point3D> allPoints = new List<Point3D>();
-
-
         /// <summary>
         /// Загружены ли настройки
         /// </summary>

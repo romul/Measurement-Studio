@@ -1,4 +1,4 @@
-﻿namespace TSU.Voltmeters
+﻿namespace Tsu.Voltmeters
 {
     partial class VoltmeterControl
     {

@@ -22,6 +22,12 @@ namespace Common
                 MessageBox.Show("Запустите инсталлятор:\n"+@"C:\Windows\Microsoft.NET\Framework\v2.0.50727\InstallUtil AppInstaller.dll", "Нет доступа к логам системы", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        public static void ShowInformationMessage(string message)
+        {
+            MessageBox.Show(message, "Информация.", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);          
+        }
+
         /// <summary>
         /// Записать в Event Log сообщение об ошибке с дублированием в консоли и/или MessageBox'ом
         /// </summary>

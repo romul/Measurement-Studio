@@ -25,7 +25,7 @@ namespace Common
 
         public override string ToString()
         {
-            return String.Format("{0:F3}\t{1:F3}\t{2:F3}", X, Y, Z);
+            return String.Format(null, "{0:F3}\t{1:F3}\t{2:F3}", X, Y, Z);
         }
     }
 
@@ -41,7 +41,7 @@ namespace Common
 
         public override string ToString()
         {
-            return String.Format("{0}\t{1}", Start, Stop);
+            return String.Format(null, "{0}\t{1}", Start, Stop);
         }
     }
 }

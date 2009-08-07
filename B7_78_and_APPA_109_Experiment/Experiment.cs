@@ -1,6 +1,6 @@
 ﻿using System;
 using Common;
-using TSU.Voltmeters;
+using Tsu.Voltmeters;
 using System.Windows.Forms;
 
 namespace Two_B7_78_Experiment
@@ -8,7 +8,7 @@ namespace Two_B7_78_Experiment
     class Experiment : AbstractExperiment
     {
         private readonly VoltmeterControl B7_78;
-        private readonly TSU.Voltmeters.APPA.Multimeter109nControl appa109N;
+        private readonly Tsu.Voltmeters.Appa.Multimeter109NControl appa109N;
         private int count;
         private Point3D point;
 
@@ -21,7 +21,7 @@ namespace Two_B7_78_Experiment
         {
             B7_78 = new VoltmeterControl();
             B7_78.DataReceived += OnDataReceived;
-            appa109N = new TSU.Voltmeters.APPA.Multimeter109nControl();
+            appa109N = new Tsu.Voltmeters.Appa.Multimeter109NControl();
             Settings = new TSettings();
             ExperimentCaption = "B7 78/1 + APPA 109N";
         }
@@ -30,7 +30,7 @@ namespace Two_B7_78_Experiment
         {
             var y = CustomSettings.Y1Transform.Call(args.Value);
             point = new Point3D(count * 1e-3 * Settings.MeasurementPeriod, y);
-            TSU.Voltmeters.APPA.DataReceivedEventArgs res = appa109N.ReadValue();
+            Tsu.Voltmeters.Appa.DataReceivedEventArgs res = appa109N.ReadValue();
             var z = CustomSettings.Y2Transform.Call(res.Value);
             point.Z = z;
             Chart.AddPoint(point);

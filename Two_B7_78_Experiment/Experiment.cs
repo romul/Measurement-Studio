@@ -1,6 +1,6 @@
 ﻿using System;
 using Common;
-using TSU.Voltmeters;
+using Tsu.Voltmeters;
 using System.Windows.Forms;
 
 namespace Two_B7_78_Experiment

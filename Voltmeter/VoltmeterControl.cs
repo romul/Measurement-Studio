@@ -4,8 +4,9 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Threading;
 using System.Globalization;
+using Visa32;
 
-namespace TSU.Voltmeters
+namespace Tsu.Voltmeters
 {
     [ToolboxBitmap(typeof(VoltmeterControl), "UsbHidBmp.bmp")]
     public partial class VoltmeterControl : Component
@@ -156,16 +157,16 @@ namespace TSU.Voltmeters
             {
                 // If port is open, close it
                 if (this.connected)
-                    this.errorStatus = visa32.viClose(this.vi);
+                    this.errorStatus = NativeMethods.viClose(this.vi);
 
                 // Open the Visa session
-                this.errorStatus = visa32.viOpenDefaultRM(out this.videfaultRM);
+                this.errorStatus = NativeMethods.viOpenDefaultRM(out this.videfaultRM);
 
                 // Open communication to the instrument                (addrType.Text).ToUpper() + "::INSTR"
-                this.errorStatus = visa32.viOpen(this.videfaultRM, DeviceName, 0, 0, out this.vi);
+                this.errorStatus = NativeMethods.viOpen(this.videfaultRM, DeviceName, 0, 0, out this.vi);
 
                 // If an error occurs, give a message
-                if (this.errorStatus < visa32.VI_SUCCESS)
+                if (this.errorStatus < NativeMethods.VI_SUCCESS)
                 {
                     this.connected = false;
                     throw new VoltmeterException("Unable to open device port; check address");
@@ -173,13 +174,13 @@ namespace TSU.Voltmeters
 
                 // Set the termination character to carriage return (i.e., 13);
                 // the 3458A uses this character
-                this.errorStatus = visa32.viSetAttribute(this.vi, visa32.VI_ATTR_TERMCHAR, 13);
+                this.errorStatus = NativeMethods.viSetAttribute(this.vi, NativeMethods.VI_ATTR_TERMCHAR, 13);
 
                 // Set the flag to terminate when receiving a termination character
-                this.errorStatus = visa32.viSetAttribute(this.vi, visa32.VI_ATTR_TERMCHAR_EN, 1);
+                this.errorStatus = NativeMethods.viSetAttribute(this.vi, NativeMethods.VI_ATTR_TERMCHAR_EN, 1);
 
                 // Set timeout in milliseconds; set the timeout for your requirements
-                this.errorStatus = visa32.viSetAttribute(this.vi, visa32.VI_ATTR_TMO_VALUE, 2000);
+                this.errorStatus = NativeMethods.viSetAttribute(this.vi, NativeMethods.VI_ATTR_TMO_VALUE, 2000);
 
                 // Check and make sure the correct instrument is addressed
                 this.connected = true;
@@ -196,18 +197,18 @@ namespace TSU.Voltmeters
             }
         }
 
-        private void Setup(MeasurementMode mode, string aditional_params)
+        private void Setup(MeasurementMode mode, string aditionalParams)
         {
             if (!this.Connected) this.Connect();
             //System.Windows.Forms.MessageBox.Show(
             string smode = mode.ToString().Replace('_', ':');
-            this.SendCmd("CONF:" + smode + " " + aditional_params);
+            this.SendCmd("CONF:" + smode + " " + aditionalParams);
         }
 
-        public void Setup(IEnumerable<string> init_commands)
+        public void Setup(IEnumerable<string> initCommands)
         {
             if (!this.Connected) this.Connect();
-            foreach (string cmd in init_commands)
+            foreach (string cmd in initCommands)
             {
                 this.SendCmd(cmd);
             }
@@ -223,9 +224,9 @@ namespace TSU.Voltmeters
             try
             {
                 // Write the command to the instrument (terminated by a linefeed; vbLf is ASCII character 10)
-                this.errorStatus = visa32.viPrintf(this.vi, cmd + "\n");
+                this.errorStatus = NativeMethods.viPrintf(this.vi, cmd + "\n");
 
-                if (this.errorStatus < visa32.VI_SUCCESS)
+                if (this.errorStatus < NativeMethods.VI_SUCCESS)
                 {
                     throw new VoltmeterException("I/O Error! \nError status: " + this.errorStatus.ToString());
                 }
@@ -251,9 +252,9 @@ namespace TSU.Voltmeters
             try
             {
                 // Return the reading
-                this.errorStatus = visa32.viScanf(this.vi, "%2048t", msg);
+                this.errorStatus = NativeMethods.viScanf(this.vi, "%2048t", msg);
 
-                if (this.errorStatus < visa32.VI_SUCCESS)
+                if (this.errorStatus < NativeMethods.VI_SUCCESS)
                 {
                     throw new VoltmeterException("Reading error! \nError status: " + this.errorStatus.ToString());
                 }
@@ -352,10 +353,10 @@ namespace TSU.Voltmeters
             if (this.connected)
             {
                 // Close the device session
-                this.errorStatus = visa32.viClose(this.vi);
+                this.errorStatus = NativeMethods.viClose(this.vi);
 
                 // Close the session
-                this.errorStatus = visa32.viClose(this.videfaultRM);
+                this.errorStatus = NativeMethods.viClose(this.videfaultRM);
             }      
         }
 

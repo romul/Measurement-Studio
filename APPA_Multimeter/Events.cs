@@ -1,14 +1,14 @@
 ﻿using System;
 
-namespace TSU.Voltmeters.APPA
+namespace Tsu.Voltmeters.Appa
 {
     public class DataReceivedEventArgs : EventArgs
     {
-        public readonly double Value;
+        public double Value { get; private set; }
 
-        public readonly double Delta;
+        public double Delta { get; private set; }
 
-        public readonly MeasurementMode Mode;
+        public MeasurementMode Mode { get; private set; }
 
         public DataReceivedEventArgs(double value, double delta, MeasurementMode mode)
         {
@@ -17,6 +17,4 @@ namespace TSU.Voltmeters.APPA
             this.Mode = mode;
         }
     }
-
-    public delegate void DataReceivedEventHandler(object sender, DataReceivedEventArgs args);
 }
