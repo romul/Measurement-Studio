@@ -9,7 +9,7 @@ namespace Two_B7_78_Experiment
     {
         private readonly VoltmeterControl B7_78_1, B7_78_2;
         private int count;
-        private Point3D point;
+        private Point3D point = new Point3D();
 
         private TSettings CustomSettings
         {
@@ -27,8 +27,8 @@ namespace Two_B7_78_Experiment
         }
 
         private void OnDataReceived(object sender, DataReceivedEventArgs args)
-        {            
-            if (point.Z == null)
+        {
+            if (!point.WasInitialized)
             {
                 var y = CustomSettings.Y1Transform.Call(args.Value);
                 point = new Point3D(count * 1e-3 * Settings.MeasurementPeriod, y);
@@ -40,6 +40,7 @@ namespace Two_B7_78_Experiment
                 Chart.AddPoint(point);
                 Data.SavePoint(point);
                 count++;
+                point = new Point3D();
             }
         }
 

@@ -10,14 +10,18 @@ namespace Common
         public Point3D(double x, double y)
         {
             X = x;
-            Y = y;
+            Y = y;            
             Z = null;
+            wasInitialized = true;
         }
 
         public Point3D(double x, double y, double z):this(x,y)
         {
             Z = z;
         }
+
+        public bool WasInitialized { get { return wasInitialized; } }
+        bool wasInitialized;
 
         public override string ToString()
         {
