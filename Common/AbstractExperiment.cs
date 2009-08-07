@@ -72,6 +72,7 @@ namespace Common
             chart.AutoScroll = Settings.AutoScroll;
             chart.LegendVisible = Settings.LegendVisible;
             chart.DotsPerFrame = Settings.DotsPerFrame;
+            chart.Caption = Settings.ChartCaption; 
             chart.PlotMode = PlotModes.None;
             chart.XAxisLegend = Settings.XAxisLegend;
         }
