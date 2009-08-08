@@ -3,6 +3,7 @@ using System.ComponentModel;
 
 namespace Common
 {
+    [CLSCompliant(true)]
     public abstract class TwoDevicesExperiment : AbstractExperiment
     {         
         /// <summary>
@@ -44,7 +45,7 @@ namespace Common
             get { return y2Transform; }
             set { y2Transform = value; }
         }
-        protected Transform.Functions y2Transform = Transform.Functions.Nothing;
+        Transform.Functions y2Transform = Transform.Functions.Nothing;
 
         [Enum(EnumType = typeof(PlotModes))]
         [SetByUser(Caption = "Режим построения", Category = "2-ая зависимость")]
@@ -53,7 +54,7 @@ namespace Common
             get { return plotMode; }
             set { plotMode = value; }
         }
-        protected PlotModes plotMode = PlotModes.Y1AndY2; 
+        PlotModes plotMode = PlotModes.Y1AndY2; 
     }
 
     public enum PlotModes

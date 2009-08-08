@@ -24,7 +24,6 @@ namespace Common
             dataSaver = CreateDataSaver(settings.SaveMode);
             measPoints = new List<MeasPoint>();
             allPoints = new List<Point3D>();
-            currentNum = 0;
         }
 
         #endregion
@@ -46,9 +45,9 @@ namespace Common
             }
         }
 
-        public void SavePoint(Point3D p)
+        public void SavePoint(Point3D point)
         {
-            dataSaver.SavePoint(p);
+            dataSaver.SavePoint(point);
         }
 
         public void SaveToFile(string destFileName)
@@ -63,10 +62,10 @@ namespace Common
 
         #endregion
 
-        public void AddPoint(Point3D p)
+        public void AddPoint(Point3D point)
         {
             currentNum++;
-            allPoints.Add(p);
+            allPoints.Add(point);
         }
 
         public void ProcessMeasurementEvent(object sender, MeasurementEventArgs e)

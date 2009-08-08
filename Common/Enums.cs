@@ -19,6 +19,7 @@ namespace Common
     public enum ConnectStatus { Successful, OneDeviceNotConnected, AllDevicesNotConnected }
     public enum MeasurementState { Connected, Ready, Started, Stopped, Disconnected }
 
+    /* 
     public static class Extender
     {
         public static string ToString(this Enum o, int dummy)
@@ -34,7 +35,7 @@ namespace Common
             return o.ToString();
         }
     }
-
+    */
     public static class Transform 
     {
         public enum Functions
@@ -57,11 +58,7 @@ namespace Common
                         
         }
 
-        private static readonly Dictionary<Functions, Func<double, double>> tfDictonary;
-
-        static Transform()
-        {
-            tfDictonary =
+        private static readonly Dictionary<Functions, Func<double, double>> tfDictonary =
                 new Dictionary<Functions, Func<double, double>>
                     {
                         {Functions.Nothing, x => x},
@@ -72,12 +69,12 @@ namespace Common
                         {Functions.Cos, Math.Cos},
                         {Functions.CuprumConstantantFromMiliVoltToCelcium, CuprumConstantantFromMiliVoltToCelcium}
                     };
-        }
 
-        public static double Call(this Functions func, double x)
+
+        public static double Call(this Functions func, double xValue)
         {
             Debug.Assert(tfDictonary.ContainsKey(func));
-            return tfDictonary[func](x);
+            return tfDictonary[func](xValue);
         }
 
         private static double CuprumConstantantFromMiliVoltToCelcium(double x)

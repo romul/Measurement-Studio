@@ -33,3 +33,4 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("3.2.5")]
 [assembly: AssemblyFileVersion("3.2.5")]
+[assembly: System.Resources.NeutralResourcesLanguage("ru-RU")]

@@ -19,7 +19,7 @@ namespace Common
             }
             catch (System.Security.SecurityException)
             {
-                MessageBox.Show("Запустите инсталлятор:\n"+@"C:\Windows\Microsoft.NET\Framework\v2.0.50727\InstallUtil AppInstaller.dll", "Нет доступа к логам системы", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Запустите инсталлятор:\n" + @"C:\Windows\Microsoft.NET\Framework\v2.0.50727\InstallUtil AppInstaller.dll", "Нет доступа к логам системы", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
             }
         }
 

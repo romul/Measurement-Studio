@@ -4,6 +4,7 @@ using Common;
 
 namespace Stub_Experiment
 {
+    [CLSCompliant(true)]
     public sealed class Experiment : TwoDevicesExperiment
     {
         private readonly Timer timer = new Timer();

@@ -81,7 +81,7 @@ namespace MeasurementStudio
         }
 
 
-        public void AddPoint(Common.Point3D p)
+        public void AddPoint(Common.Point3D point)
         {            
             if (AutoScroll && chart.Series[0].Points.Count >= DotsPerFrame)
             {
@@ -90,14 +90,14 @@ namespace MeasurementStudio
                 chart.ChartAreas[0].AxisY.Minimum = Math.Floor(10 * visibleY1.Min())/10;
                 chart.ChartAreas[0].AxisY.Maximum = Math.Ceiling(10 * visibleY1.Max())/10;
             }
-            if (p.Z != null && AutoScroll && chart.Series[0].Points.Count >= DotsPerFrame)
+            if (point.Z != null && AutoScroll && chart.Series[0].Points.Count >= DotsPerFrame)
             {
                 chart.Series[1].Points.RemoveAt(0);
             }                
-            chart.Series[0].Points.AddXY(p.X, p.Y);
+            chart.Series[0].Points.AddXY(point.X, point.Y);
             chart.ResetAutoValues();
-            visibleY1.Add(p.Y);
-            if (p.Z != null) chart.Series[1].Points.AddXY(p.X, p.Z); 
+            visibleY1.Add(point.Y);
+            if (point.Z != null) chart.Series[1].Points.AddXY(point.X, point.Z); 
         }
 
 

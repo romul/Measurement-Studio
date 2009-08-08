@@ -1,10 +1,11 @@
 ﻿namespace Common
 {
+    [System.CLSCompliant(true)]
     public interface IChart
     {        
         void Clear();
         void SetSeriesNames(params string[] seriesNames);
-        void AddPoint(Point3D p);
+        void AddPoint(Point3D point);
 
         string Caption { get; set; }
         string XAxisLegend { get; set; }

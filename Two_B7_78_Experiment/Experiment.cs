@@ -5,7 +5,8 @@ using System.Windows.Forms;
 
 namespace Two_B7_78_Experiment
 {
-    class Experiment : AbstractExperiment
+    [CLSCompliant(true)]
+    public class Experiment : AbstractExperiment
     {
         private readonly VoltmeterControl B7_78_1, B7_78_2;
         private int count;
@@ -61,7 +62,7 @@ namespace Two_B7_78_Experiment
             }
             catch (VoltmeterException ex)
             {
-                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                ErrorLogProvider.WriteToEventLogAndShow(ex.Message);
             }
 
             if (B7_78_1.Connected && B7_78_2.Connected)

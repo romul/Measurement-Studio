@@ -2,7 +2,8 @@
 
 namespace Stub_Experiment
 {
-    class TSettings : TwoDevicesSettings
+    [System.CLSCompliant(true)]
+    public class TSettings : TwoDevicesSettings
     {
     }
 }

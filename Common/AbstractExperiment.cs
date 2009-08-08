@@ -4,7 +4,8 @@ using System.Xml.Linq;
 
 namespace Common
 {
-    public abstract class AbstractExperiment //: IExperiment
+    [CLSCompliant(true)]
+    public abstract class AbstractExperiment 
     {
         /// <summary>
         /// Настройки, соответсвующие эксперименту
@@ -120,9 +121,9 @@ namespace Common
         /// <summary>
         /// Возвращает путь к директории с настройками для данного режима
         /// </summary>
-        public string GetSettingsPath()
+        public string SettingsPath
         {
-            return Settings.SettingsPath;
+            get { return Settings.SettingsPath; }
         }
 
         /// <summary>

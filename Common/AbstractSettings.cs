@@ -11,6 +11,7 @@ namespace Common
     public delegate void PropertyHandler(PropertyInfo property, String propertyCaption);
     public delegate void PropertiesGroupHandler(string groupCaption);
 
+    [CLSCompliant(true)]
     public abstract class AbstractSettings
     {
         #region Свойства, задаваемые пользователем
@@ -27,8 +28,7 @@ namespace Common
             get { return series1Legend; }
             set { series1Legend = value; }
         }
-        protected string series1Legend = "Series1";
-
+        private string series1Legend = "Series1";
        
         [Enum(EnumType = typeof(Transform.Functions))]
         [SetByUser(Caption = "y = f(y)", Category = "1-ая зависимость")]
@@ -37,8 +37,7 @@ namespace Common
             get { return y1Transform; }
             set { y1Transform = value; } 
         }
-        protected Transform.Functions y1Transform = Transform.Functions.Nothing;
-
+        private Transform.Functions y1Transform = Transform.Functions.Nothing;
         
         [Numeric(MinValue = 125, MaxValue = 10000, Increment = 125)]
         [SetByUser(Caption = "Периодичность замеров [мс]")]
@@ -47,8 +46,7 @@ namespace Common
             get { return measurementPeriod; }
             set { measurementPeriod = value; } 
         }
-        protected int measurementPeriod = 500;
-
+        private int measurementPeriod = 500;
 
         [Boolean][SetByUser(Caption = "Автопрокрутка")]
         public virtual bool AutoScroll
@@ -56,7 +54,7 @@ namespace Common
             get { return autoScroll; }
             set { autoScroll = value; } 
         }
-        protected bool autoScroll = true;
+        private bool autoScroll = true;
 
 
         [Boolean][SetByUser(Caption = "Показывать легенду")]
@@ -65,7 +63,7 @@ namespace Common
             get { return legendVisible; }
             set { legendVisible = value; }
         }
-        protected bool legendVisible = true;
+        private bool legendVisible = true;
 
         [Numeric(MinValue = 10, MaxValue = 1000, Increment = 5)]
         [SetByUser(Caption = "Кол-во точек на кадр")]
@@ -74,7 +72,7 @@ namespace Common
             get { return dotsPerFrame; }
             set { dotsPerFrame = value; }
         }
-        protected int dotsPerFrame = 50;
+        private int dotsPerFrame = 50;
 
 
         /// <summary>
@@ -87,7 +85,7 @@ namespace Common
             get { return saveMode; }
             set { saveMode = value; }
         }
-        protected SaveMode saveMode = SaveMode.SaveInRuntime;
+        private SaveMode saveMode = SaveMode.SaveInRuntime;
 
         #endregion
         

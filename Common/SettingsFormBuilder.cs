@@ -5,8 +5,6 @@ using System.Windows.Forms;
 
 namespace Common
 {
-
-
     internal sealed class SettingsFormBuilder : ISettingsFormBuilder
     {
         private readonly AbstractSettings settings;

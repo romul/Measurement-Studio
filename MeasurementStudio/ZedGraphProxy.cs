@@ -79,37 +79,37 @@ namespace MeasurementStudio
             
         }
 
-        public void AddPoint(Point3D p)
+        public void AddPoint(Point3D point)
         {
             if (AutoScroll && y1List.Count >= DotsPerFrame)
             {
                 y1List.RemoveAt(0);
             }
-            if (p.Z != null)
+            if (point.Z != null)
             {
                 if (AutoScroll && y2List.Count >= DotsPerFrame)
                 {
                     y2List.RemoveAt(0);
                 }
-                var z = (double) p.Z;
+                var z = (double) point.Z;
                 switch (PlotMode)
                 {
                     case PlotModes.Y1AndY2:
-                        myPane.CurveList[0].AddPoint(p.X, p.Y);
-                        myPane.CurveList[1].AddPoint(p.X, z);
+                        myPane.CurveList[0].AddPoint(point.X, point.Y);
+                        myPane.CurveList[1].AddPoint(point.X, z);
                         break;
                     case PlotModes.Y1OfY2:
-                        myPane.CurveList[0].AddPoint(z, p.Y);
+                        myPane.CurveList[0].AddPoint(z, point.Y);
                         break;
                     case PlotModes.Y2OfY1:
-                        myPane.CurveList[0].AddPoint(p.Y, z);
+                        myPane.CurveList[0].AddPoint(point.Y, z);
                         break;
                 }
                 
             } 
             else
             {
-               myPane.CurveList[0].AddPoint(p.X, p.Y); 
+               myPane.CurveList[0].AddPoint(point.X, point.Y); 
             }
             Chart.AxisChange();
             Chart.Refresh();

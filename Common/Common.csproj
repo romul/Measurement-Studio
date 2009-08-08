@@ -79,7 +79,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Attributes.cs" />
     <Compile Include="RawData.cs" />
-    <Compile Include="SettingsFormBuilder.cs" />
     <Compile Include="TwoDevicesExperiment.cs" />
     <Compile Include="WpfSettingsFormBuilder.cs" />
   </ItemGroup>

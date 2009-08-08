@@ -40,7 +40,7 @@ namespace Common
 
     }
 
-    namespace WPF
+    namespace Wpf
     {
         using System.Windows.Controls;
 

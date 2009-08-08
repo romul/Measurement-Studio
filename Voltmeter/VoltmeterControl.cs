@@ -9,6 +9,7 @@ using Visa32;
 namespace Tsu.Voltmeters
 {
     [ToolboxBitmap(typeof(VoltmeterControl), "UsbHidBmp.bmp")]
+    [CLSCompliant(true)]
     public partial class VoltmeterControl : Component
     {
         System.Windows.Forms.Timer answer_timer;
@@ -20,10 +21,10 @@ namespace Tsu.Voltmeters
             channel = this.FirstChannelNumber;
         }
         private int channel; // номер текущего канала
-        private int videfaultRM = 0;	// Resource manager session returned by viOpenDefaultRM(videfaultRM)
-        private int vi = 0;			// Session identifier of devices
-        private int errorStatus;		// VISA function status return code
-        private bool connected = false;  // Used to determine if there is connection with the instrument
+        private int videfaultRM;	// Resource manager session returned by viOpenDefaultRM(videfaultRM)
+        private int vi;			    // Session identifier of devices
+        private int errorStatus;		 // VISA function status return code
+        private bool connected;  // Used to determine if there is connection with the instrument
 
         private Queue<double> values = new Queue<double>(1024);
         private Timer read_timer;
@@ -32,7 +33,7 @@ namespace Tsu.Voltmeters
         [Description("The event that occurs when data is received from the embedded system")]
         [Category("Embedded Event")]
         [DisplayName("OnDataReceived")]
-        public event DataReceivedEventHandler DataReceived;
+        public event EventHandler<DataReceivedEventArgs> DataReceived;
 
         public string DeviceDescription
         {
@@ -301,15 +302,15 @@ namespace Tsu.Voltmeters
         }
         protected virtual void OnDataReceived()
         {
-            DataReceivedEventHandler localHandler = DataReceived;
-            double? val = GetValue();
+            EventHandler<DataReceivedEventArgs> localHandler = DataReceived;
+            double? val = TakeValueOut();
             if ((localHandler != null)&&(val != null))
             {
                 localHandler(this, new DataReceivedEventArgs((double)val, channel));
             }
         }
 
-        protected double? GetValue()
+        protected double? TakeValueOut()
         {
             double? res = null;
             lock (values)
@@ -329,14 +330,14 @@ namespace Tsu.Voltmeters
 
         private void OnAnswerTimerTick(object sender, EventArgs e)
         {
-            DataReceivedEventHandler localHandler = DataReceived;
-            double? val = GetValue();
+            EventHandler<DataReceivedEventArgs> localHandler = DataReceived;
+            double? val = TakeValueOut();
             if (localHandler != null)
             {
                 while (val != null)
                 {
                     localHandler(this, new DataReceivedEventArgs((double)val, channel));
-                    val = GetValue();
+                    val = TakeValueOut();
                 }
             }
         }
@@ -373,9 +374,9 @@ namespace Tsu.Voltmeters
     }
     public class DataReceivedEventArgs : EventArgs
     {
-        public readonly double Value;
+        public double Value { get; private set; }
 
-        public readonly int Channel;
+        public int Channel { get; private set; }
 
         public DataReceivedEventArgs(double data, int channel)
         {
@@ -383,7 +384,7 @@ namespace Tsu.Voltmeters
             this.Channel = channel;
         }
     }
-    public delegate void DataReceivedEventHandler(object sender, DataReceivedEventArgs args);
+    //public delegate void DataReceivedEventHandler(object sender, DataReceivedEventArgs args);
 
     public class VoltmeterException : Exception
     {

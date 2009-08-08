@@ -2,6 +2,7 @@
 
 namespace Two_B7_78_Experiment
 {
+    [System.CLSCompliant(true)]
     public class TSettings : TwoDevicesSettings
     {
         [Text(LineCount = 3, MaxLength = 1000)]

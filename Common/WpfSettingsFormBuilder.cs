@@ -6,7 +6,7 @@ using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Markup;
-using Common.WPF;
+using Common.Wpf;
 using Microsoft.Samples.KMoore.WPFSamples.NumericUpDownControl;
 
 namespace Common

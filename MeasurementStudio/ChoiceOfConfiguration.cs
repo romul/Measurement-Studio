@@ -38,7 +38,7 @@ namespace MeasurementStudio
 
         private void LoadProfiles()
         {
-            var dir = new DirectoryInfo(AppSettings.Mode.GetSettingsPath());
+            var dir = new DirectoryInfo(AppSettings.Mode.SettingsPath);
             if (!dir.Exists) dir.Create();
             var files = dir.GetFiles("*.xml");
             cbProfiles.Items.Clear();

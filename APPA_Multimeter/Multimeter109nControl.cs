@@ -10,6 +10,7 @@ using System.IO.Ports;
 
 namespace Tsu.Voltmeters.Appa
 {
+    [CLSCompliant(true)]
     public partial class Multimeter109NControl : Component
     {
         /// <summary>

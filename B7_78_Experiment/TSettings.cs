@@ -2,6 +2,7 @@
 
 namespace B7_78_Experiment
 {
+    [System.CLSCompliant(true)]
     public class TSettings : AbstractSettings
     {
         [Text(LineCount = 3, MaxLength=1000)]
