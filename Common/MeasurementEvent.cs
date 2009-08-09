@@ -1,9 +1,10 @@
-﻿
+﻿using System;
+
 namespace Common
 {
     public enum MeasurementEvents { Start, Stop }
 
-    public class MeasurementEventArgs
+    public class MeasurementEventArgs : EventArgs
     {
         public MeasurementEventArgs(MeasurementEvents mEvent)
         {
@@ -11,6 +12,4 @@ namespace Common
         }
         public MeasurementEvents EventType { get; private set; }
     }
-
-    internal delegate void MeasurementEventHandler(object sender, MeasurementEventArgs e);
 }

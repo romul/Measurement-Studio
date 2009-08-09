@@ -5,7 +5,7 @@ using System.Xml.Linq;
 namespace Common
 {
     [CLSCompliant(true)]
-    public abstract class AbstractExperiment 
+    public abstract class AbstractExperiment : IDisposable
     {
         /// <summary>
         /// Настройки, соответсвующие эксперименту
@@ -15,15 +15,15 @@ namespace Common
 
         protected abstract ConnectStatus TryConnect();
 
-        internal event MeasurementEventHandler MeasurementEvent;
+        internal event EventHandler<MeasurementEventArgs> MeasurementEvent;
 
-        public void RaiseMeasurementEvent(MeasurementEventArgs e)
-        {
-            MeasurementEventHandler handler = MeasurementEvent;
+        public void AddMeasurementPoint(MeasurementEvents type)
+        {            
+            EventHandler<MeasurementEventArgs> handler = MeasurementEvent;
             // Event will be null if there are no subscribers
             if (handler != null)
             {
-                handler(this, e);
+                handler(this, new MeasurementEventArgs(type));
             }
         }
 
@@ -210,7 +210,7 @@ namespace Common
         {
             if (CurrentState != MeasurementState.Ready)
             {
-                throw new ApplicationException("Перед началом измерений устройства надо подключить и настроить!");
+                throw new MeasurementException("Перед началом измерений устройства надо подключить и настроить!");
             }
             Data = new RawData(Settings);
             MeasurementEvent += Data.ProcessMeasurementEvent;
@@ -239,6 +239,10 @@ namespace Common
             return Settings.ToString();
         }
 
+        #region IDisposable Members
 
+        public abstract void Dispose();
+
+        #endregion
     }
 }

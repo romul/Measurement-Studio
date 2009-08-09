@@ -119,7 +119,7 @@ namespace Common
             {
                 res = (T) property.GetValue(this, null);
             }
-            catch
+            catch(InvalidCastException)
             {
                 res = default(T);
             }

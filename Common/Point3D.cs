@@ -2,6 +2,12 @@
 
 namespace Common
 {
+    /// <summary>
+    /// Структура, представляющая результат измерения в определённый момент времени
+    /// X - время
+    /// Y - показание первого прибора
+    /// Z - показание второго прибора
+    /// </summary>
     public struct Point3D
     {       
         public double X { get { return x; } }
@@ -33,24 +39,6 @@ namespace Common
         public override string ToString()
         {
             return String.Format("{0:F3}\t{1:F3}\t{2:F3}", X, Y, Z);
-        }
-    }
-
-    public struct MeasPoint
-    {
-        int start, stop;
-        public int Start { get { return start; } }
-        public int Stop { get { return stop; } }
-
-        public MeasPoint(int start, int stop)
-        {
-            this.start = start;
-            this.stop = stop;
-        }
-
-        public override string ToString()
-        {
-            return String.Format("{0}\t{1}", Start, Stop);
         }
     }
 }

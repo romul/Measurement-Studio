@@ -6,7 +6,7 @@ using System.Windows.Forms;
 namespace Two_B7_78_Experiment
 {
     [CLSCompliant(true)]
-    public class Experiment : AbstractExperiment
+    public sealed class Experiment : AbstractExperiment
     {
         private readonly VoltmeterControl B7_78_1, B7_78_2;
         private int count;
@@ -98,6 +98,16 @@ namespace Two_B7_78_Experiment
             {
                 CurrentState = MeasurementState.Disconnected;
             }
+        }
+
+        #endregion
+
+        #region IDisposable Members
+
+        public sealed override void Dispose()
+        {
+            B7_78_1.Dispose();
+            B7_78_2.Dispose();
         }
 
         #endregion

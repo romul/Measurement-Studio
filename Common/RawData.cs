@@ -68,7 +68,7 @@ namespace Common
             allPoints.Add(point);
         }
 
-        public void ProcessMeasurementEvent(object sender, MeasurementEventArgs e)
+        internal void ProcessMeasurementEvent(object sender, MeasurementEventArgs e)
         {
             switch (e.EventType)
             {

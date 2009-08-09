@@ -58,14 +58,21 @@ namespace MeasurementStudio
 
         private void tsbStart_Click(object sender, EventArgs e)
         {
-            EnableStopActions();
-            AppSettings.Mode.StartMeasurement();
+            try
+            {
+                AppSettings.Mode.StartMeasurement();
+            }
+            catch (MeasurementException ex)
+            {
+                ErrorLogProvider.WriteToEventLogAndShow(ex.Message);
+            }
+            EnableStopActions();            
         }
 
         private void tsbStop_Click(object sender, EventArgs e)
         {
-            EnableStartActions();
             AppSettings.Mode.StopMeasurement();
+            EnableStartActions();           
             if (AppSettings.Mode.ShouldBeSaved) tsbSave_Click(sender, e);
         }
 
@@ -102,7 +109,7 @@ namespace MeasurementStudio
             {
                 var keyBoard = new Keyboard();
                 var measurementEvent = keyBoard.ScrollLock ? MeasurementEvents.Start : MeasurementEvents.Stop;
-                AppSettings.Mode.RaiseMeasurementEvent(new MeasurementEventArgs(measurementEvent));
+                AppSettings.Mode.AddMeasurementPoint(measurementEvent);
             }
         }
 

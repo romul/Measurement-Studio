@@ -12,6 +12,9 @@
     <AssemblyName>Two_B7_78_Experiment</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -52,6 +55,7 @@
     <ProjectReference Include="..\Voltmeter\Voltmeter.csproj">
       <Project>{FEEE2BD2-8DCE-4F2B-B425-B76AB1568623}</Project>
       <Name>Voltmeter</Name>
+      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

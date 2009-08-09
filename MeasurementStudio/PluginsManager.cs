@@ -45,7 +45,7 @@ namespace MeasurementStudio
                     AbstractExperiment experiment = GetExperimentModeFromAssembly(assembly);
                     ExperimentModes.Add(experiment);
                 }
-                catch (Exception)
+                catch (InvalidExperimentAssemblyException)
                 {
                     string message = "В файле " + fi.FullName + " не найден необходимый класс Experiment или этот класс не унаследован от AbstractExperiment\n";
                     ErrorLogProvider.WriteToEventLog(message, true, false);
@@ -66,7 +66,7 @@ namespace MeasurementStudio
             var experiment = o as AbstractExperiment;
 
             if (experiment == null)
-                throw new Exception();
+                throw new InvalidExperimentAssemblyException();
 
             if (Properties.Settings.Default.PluginCaption == experiment.ToString())
             {

@@ -12,6 +12,9 @@
     <AssemblyName>Common</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -62,28 +65,32 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractExperiment.cs" />
-    <Compile Include="AbstractSettings.cs" />
-    <Compile Include="ComboBoxWpfExtender.cs" />
-    <Compile Include="ControlsManager.cs" />
+    <Compile Include="MeasPoint.cs" />
+    <Compile Include="MeasurementException.cs" />
+    <Compile Include="SettingsLogic\AbstractSettings.cs" />
+    <Compile Include="SettingsLogic\ComboBoxWpfExtender.cs" />
+    <Compile Include="SettingsLogic\ControlsManager.cs" />
     <Compile Include="Enums.cs" />
-    <Compile Include="ComboBoxExtender.cs">
+    <Compile Include="SettingsLogic\ComboBoxExtender.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ErrorLogProvider.cs">
     </Compile>
     <Compile Include="IChart.cs" />
-    <Compile Include="IDataSaver.cs" />
-    <Compile Include="ISettingsFormBuilder.cs" />
+    <Compile Include="SaveLogic\IDataSaver.cs" />
+    <Compile Include="SettingsLogic\ISettingsFormBuilder.cs" />
     <Compile Include="MeasurementEvent.cs" />
+    <Compile Include="SaveLogic\NothingSaver.cs" />
+    <Compile Include="SaveLogic\OnDemandSaver.cs" />
     <Compile Include="Point3D.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Attributes.cs" />
+    <Compile Include="SettingsLogic\Attributes.cs" />
     <Compile Include="RawData.cs" />
+    <Compile Include="SaveLogic\RuntimeSaver.cs" />
     <Compile Include="TwoDevicesExperiment.cs" />
-    <Compile Include="WpfSettingsFormBuilder.cs" />
+    <Compile Include="SettingsLogic\WpfSettingsFormBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
     <None Include="CommonClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

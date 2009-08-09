@@ -9,18 +9,19 @@ namespace Common
     /// </summary>
     static public class ErrorLogProvider
     {
-        static EventLog el;
+        static EventLog el = TryCreateEventLog();
 
-        static ErrorLogProvider()
+        private static EventLog TryCreateEventLog()
         {
             try
             {
-                el = new EventLog("Application") { Source = "Measurement Studio" };
+                return new EventLog("Application") { Source = "Measurement Studio" };
             }
             catch (System.Security.SecurityException)
             {
                 MessageBox.Show("Запустите инсталлятор:\n" + @"C:\Windows\Microsoft.NET\Framework\v2.0.50727\InstallUtil AppInstaller.dll", "Нет доступа к логам системы", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
             }
+            return null;
         }
 
         public static void ShowInformationMessage(string message)

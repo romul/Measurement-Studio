@@ -70,5 +70,10 @@ namespace Stub_Experiment
         }
 
         #endregion
+
+        public sealed override void Dispose()
+        {            
+            GC.SuppressFinalize(this);        
+        }
     }
 }

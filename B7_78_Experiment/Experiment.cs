@@ -85,5 +85,13 @@ namespace B7_78_Experiment
 
         #endregion
 
+        #region IDisposable Members
+
+        public sealed override void Dispose()
+        {
+            B7_78.Dispose();
+        }
+
+        #endregion
     }
 }

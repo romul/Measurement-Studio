@@ -7,7 +7,7 @@ namespace MeasurementStudio
     using System;
     using System.Windows.Forms.DataVisualization.Charting;
 
-    class MSChartProxy : Common.IChart
+    class MSChartProxy : IChart
     {
         private readonly Chart chart;
         private const string unvisibleLegend = "UnvisibleLegend";

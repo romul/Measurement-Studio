@@ -345,8 +345,11 @@ namespace Tsu.Voltmeters
         public void StopReading()
         {
             answer_timer.Enabled = false;
-            read_timer.Dispose();
-            read_timer = null;
+            if (read_timer != null)
+            {
+                read_timer.Dispose();
+                read_timer = null;
+            }
         }
 
         public void Disconnect()
