@@ -1,6 +1,6 @@
 ﻿using Common;
 
-namespace Two_B7_78_Experiment
+namespace B7_78_and_APPA_109_Experiment
 {
     [System.CLSCompliant(true)]
     public class TSettings : TwoDevicesSettings

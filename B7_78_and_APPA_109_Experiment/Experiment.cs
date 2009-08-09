@@ -3,10 +3,10 @@ using Common;
 using Tsu.Voltmeters;
 using System.Windows.Forms;
 
-namespace Two_B7_78_Experiment
+namespace B7_78_and_APPA_109_Experiment
 {
     [CLSCompliant(true)]
-    public class Experiment : AbstractExperiment
+    public sealed class Experiment : AbstractExperiment
     {
         private readonly VoltmeterControl B7_78;
         private readonly Tsu.Voltmeters.Appa.Multimeter109NControl appa109N;
@@ -83,6 +83,16 @@ namespace Two_B7_78_Experiment
             {
                 CurrentState = MeasurementState.Disconnected;
             }
+        }
+
+        #endregion
+
+        #region IDisposable Members
+
+        public sealed override void Dispose()
+        {
+            B7_78.Dispose();
+            appa109N.Dispose();
         }
 
         #endregion

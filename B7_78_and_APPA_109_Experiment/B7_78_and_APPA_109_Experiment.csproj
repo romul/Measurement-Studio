@@ -12,6 +12,9 @@
     <AssemblyName>B7_78_and_APPA_109_Experiment</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,14 +50,17 @@
     <ProjectReference Include="..\APPA_Multimeter\AppaMultimeter.csproj">
       <Project>{9E0EC04F-2C24-41E9-AC1E-59ECC89FF873}</Project>
       <Name>AppaMultimeter</Name>
+      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{BF8B520F-F376-4B06-85C7-E44DA326F7BD}</Project>
       <Name>Common</Name>
+      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\Voltmeter\Voltmeter.csproj">
       <Project>{FEEE2BD2-8DCE-4F2B-B425-B76AB1568623}</Project>
       <Name>Voltmeter</Name>
+      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
