@@ -20,10 +20,10 @@ namespace Tsu.Voltmeters
             answer_timer.Tick += new EventHandler(OnAnswerTimerTick);
             channel = this.FirstChannelNumber;
         }
-        private int channel; // номер текущего канала
-        private int videfaultRM;	// Resource manager session returned by viOpenDefaultRM(videfaultRM)
-        private int vi;			    // Session identifier of devices
-        private int errorStatus;		 // VISA function status return code
+        private int channel;     // номер текущего канала
+        private int videfaultRM; // Resource manager session returned by viOpenDefaultRM(videfaultRM)
+        private int vi;			 // Session identifier of devices
+        private int errorStatus; // VISA function status return code
         private bool connected;  // Used to determine if there is connection with the instrument
 
         private Queue<double> values = new Queue<double>(1024);
@@ -157,40 +157,48 @@ namespace Tsu.Voltmeters
             try
             {
                 // If port is open, close it
-                if (this.connected)
-                    this.errorStatus = NativeMethods.viClose(this.vi);
+                if (connected)
+                    errorStatus = NativeMethods.viClose(vi);
 
                 // Open the Visa session
-                this.errorStatus = NativeMethods.viOpenDefaultRM(out this.videfaultRM);
+                errorStatus = NativeMethods.viOpenDefaultRM(out videfaultRM);
 
-                // Open communication to the instrument                (addrType.Text).ToUpper() + "::INSTR"
-                this.errorStatus = NativeMethods.viOpen(this.videfaultRM, DeviceName, 0, 0, out this.vi);
+                // Open communication to the instrument           
+                errorStatus = NativeMethods.viOpen(videfaultRM, DeviceName, 0, 0, out vi);
 
                 // If an error occurs, give a message
-                if (this.errorStatus < NativeMethods.VI_SUCCESS)
+                if (errorStatus < NativeMethods.VI_SUCCESS)
                 {
-                    this.connected = false;
-                    throw new VoltmeterException("Unable to open device port; check address");
+                    connected = false;
+                    throw new VoltmeterNotFoundException();
                 }
 
                 // Set the termination character to carriage return (i.e., 13);
                 // the 3458A uses this character
-                this.errorStatus = NativeMethods.viSetAttribute(this.vi, NativeMethods.VI_ATTR_TERMCHAR, 13);
+                errorStatus = NativeMethods.viSetAttribute(vi, NativeMethods.VI_ATTR_TERMCHAR, 13);
 
                 // Set the flag to terminate when receiving a termination character
-                this.errorStatus = NativeMethods.viSetAttribute(this.vi, NativeMethods.VI_ATTR_TERMCHAR_EN, 1);
+                errorStatus = NativeMethods.viSetAttribute(vi, NativeMethods.VI_ATTR_TERMCHAR_EN, 1);
 
                 // Set timeout in milliseconds; set the timeout for your requirements
-                this.errorStatus = NativeMethods.viSetAttribute(this.vi, NativeMethods.VI_ATTR_TMO_VALUE, 2000);
+                errorStatus = NativeMethods.viSetAttribute(vi, NativeMethods.VI_ATTR_TMO_VALUE, 2000);
+
+
+                // If an error occurs, give a message
+                if (errorStatus < NativeMethods.VI_SUCCESS)
+                {
+                    connected = false;
+                    throw new VoltmeterInvalidSettingsException();                    
+                }
 
                 // Check and make sure the correct instrument is addressed
-                this.connected = true;
-                this.deviceDescription = SendCmd("*IDN?"); //GetData(); 
+                connected = true;
+                deviceDescription = SendCmd("*IDN?"); //GetData(); 
 
                 if (Mode != MeasurementMode.MANUAL)
-                    this.Setup(Mode, AdditionalParams);
+                    Setup(Mode, AdditionalParams);
 
-                this.SendCmd("TRIG:DEL 0.01");
+                SendCmd("TRIG:DEL 0.01");
             }
             catch (DllNotFoundException ex)
             {
@@ -200,46 +208,47 @@ namespace Tsu.Voltmeters
 
         private void Setup(MeasurementMode mode, string aditionalParams)
         {
-            if (!this.Connected) this.Connect();
-            //System.Windows.Forms.MessageBox.Show(
+            if (!Connected) Connect();
             string smode = mode.ToString().Replace('_', ':');
-            this.SendCmd("CONF:" + smode + " " + aditionalParams);
+            SendCmd("CONF:" + smode + " " + aditionalParams);
         }
 
         public void Setup(IEnumerable<string> initCommands)
         {
-            if (!this.Connected) this.Connect();
+            if (!Connected) Connect();
             foreach (string cmd in initCommands)
             {
-                this.SendCmd(cmd);
+                SendCmd(cmd);
             }
         }
 
+        /// <summary>
+        /// This routine will send a command string to the instrument.
+        /// </summary>
+        /// <param name="cmd">command string</param>
+        /// <returns>result string</returns>
         public string SendCmd(string cmd)
-        //"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-        // This routine will send a command string to the instrument.
-        //"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
         {
-            if (!this.connected) return null;
+            if (!connected) return null;
             string answer = null;
             try
             {
                 // Write the command to the instrument (terminated by a linefeed; vbLf is ASCII character 10)
-                this.errorStatus = NativeMethods.viPrintf(this.vi, cmd + "\n");
+                errorStatus = NativeMethods.viPrintf(vi, cmd + "\n");
 
-                if (this.errorStatus < NativeMethods.VI_SUCCESS)
+                if (errorStatus < NativeMethods.VI_SUCCESS)
                 {
-                    throw new VoltmeterException("I/O Error! \nError status: " + this.errorStatus.ToString());
+                    throw new VoltmeterException("I/O Error! \nError status: " + errorStatus.ToString());
                 }
             }
-            catch (Exception e)
+            catch (VoltmeterException ex)
             {
-                throw new VoltmeterException("I/O Error (" + e.Message + ") in SendCmd method!", e);                 
+                throw new VoltmeterException("I/O Error (" + ex.Message + ") in SendCmd method!", ex);                 
             }
             finally
             {
                 if (cmd[cmd.Length - 1] == '?')
-                    answer = this.GetData();
+                    answer = GetData();
             }
             return answer;
         }
@@ -253,17 +262,17 @@ namespace Tsu.Voltmeters
             try
             {
                 // Return the reading
-                this.errorStatus = NativeMethods.viScanf(this.vi, "%2048t", msg);
+                errorStatus = NativeMethods.viScanf(vi, "%2048t", msg);
 
-                if (this.errorStatus < NativeMethods.VI_SUCCESS)
+                if (errorStatus < NativeMethods.VI_SUCCESS)
                 {
-                    throw new VoltmeterException("Reading error! \nError status: " + this.errorStatus.ToString());
+                    throw new VoltmeterException("Reading error! \nError status: " + errorStatus.ToString());
                 }
                 return msg.ToString();
             }
-            catch (Exception e)
+            catch (VoltmeterException ex)
             {
-                throw new VoltmeterException("Reading error ("+e.Message+") in GetData method!", e);         
+                throw new VoltmeterException("Reading error ("+ex.Message+") in GetData method!", ex);         
             }
         }
         
@@ -273,33 +282,24 @@ namespace Tsu.Voltmeters
         /// <param name="state"></param>
         private void ReadProc(object state)
         {
-            try
-            {              
-                if (this.IsDoubleMeasure)
-                {                    
-                    if (this.MiddleChannelNumber.HasValue)
-                    {
-                        this.SendCmd("ROUT:CLOS " + this.MiddleChannelNumber);
-                        this.SendCmd("READ?");
-                    }
-                    channel = (channel == this.FirstChannelNumber) ? this.SecondChannelNumber : this.FirstChannelNumber;
-                    this.SendCmd("ROUT:CLOS " + channel);
-                }
-               // SendCmd("INIT");
-                double val = Convert.ToDouble(this.SendCmd("READ?"), new CultureInfo("en-US"));
-                lock (values)
+            if (IsDoubleMeasure)
+            {
+                if (MiddleChannelNumber.HasValue)
                 {
-                    values.Enqueue(val);
+                    SendCmd("ROUT:CLOS " + this.MiddleChannelNumber);
+                    SendCmd("READ?");
                 }
+                channel = (channel == FirstChannelNumber) ? SecondChannelNumber : FirstChannelNumber;
+                SendCmd("ROUT:CLOS " + channel);
             }
-            catch
+            // SendCmd("INIT");
+            double val = Convert.ToDouble(SendCmd("READ?"), new CultureInfo("en-US"));
+            lock (values)
             {
+                values.Enqueue(val);
             }
-            /*lock (this)
-            {
-                this.OnDataReceived();
-            }*/
         }
+
         protected virtual void OnDataReceived()
         {
             EventHandler<DataReceivedEventArgs> localHandler = DataReceived;
@@ -323,8 +323,8 @@ namespace Tsu.Voltmeters
 
         public void StartReading()
         {
-            read_timer = new Timer(new TimerCallback(this.ReadProc), null, 0, this.Interval);
-            answer_timer.Interval = this.Interval;
+            read_timer = new Timer(new TimerCallback(ReadProc), null, 0, Interval);
+            answer_timer.Interval = Interval;
             answer_timer.Enabled = true;
         }
 
@@ -351,48 +351,20 @@ namespace Tsu.Voltmeters
 
         public void Disconnect()
         {
-            if (this.connected)
+            StopReading();
+            if (connected)
             {
                 // Close the device session
-                this.errorStatus = NativeMethods.viClose(this.vi);
-
+                errorStatus = NativeMethods.viClose(vi);
                 // Close the session
-                this.errorStatus = NativeMethods.viClose(this.videfaultRM);
+                errorStatus = NativeMethods.viClose(videfaultRM);
             }      
         }
 
         public override string ToString()
         {
-            return this.DeviceName;
+            return DeviceName;
         }
 
     }
-
-    public enum MeasurementMode
-    {
-        MANUAL, VOLT_DC, VOLT_AC, RESISTENCE, FRESISTANCE, PERIOD, CONTINUITY, DIODE, TCOUPLE, TEMPERATURE
-    }
-    public class DataReceivedEventArgs : EventArgs
-    {
-        public double Value { get; private set; }
-
-        public int Channel { get; private set; }
-
-        public DataReceivedEventArgs(double data, int channel)
-        {
-            this.Value = data;
-            this.Channel = channel;
-        }
-    }
-    //public delegate void DataReceivedEventHandler(object sender, DataReceivedEventArgs args);
-
-    public class VoltmeterException : Exception
-    {
-        public VoltmeterException() : base() { }
-        public VoltmeterException(string msg) : base(msg) { }
-        public VoltmeterException(string msg, Exception innerException) : base(msg, innerException) { }
-        protected VoltmeterException(System.Runtime.Serialization.SerializationInfo si, System.Runtime.Serialization.StreamingContext sc) : base(si, sc) { }
-    }
-
-
 }
