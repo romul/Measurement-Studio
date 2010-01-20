@@ -47,6 +47,13 @@ namespace Two_B7_78_Experiment
 
         #region Overrides of AbstractExperiment
 
+        public override void ApplySettingsToChart(IChart chart)
+        {
+            base.ApplySettingsToChart(chart);
+            chart.PlotMode = CustomSettings.PlotMode;
+            chart.SetSeriesNames(CustomSettings.Series1Legend, CustomSettings.Series2Legend);
+        }
+
         protected override ConnectStatus TryConnect()
         {
             B7_78_1.Interval = CustomSettings.MeasurementPeriod;
